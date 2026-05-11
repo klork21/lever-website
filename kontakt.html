@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Lassen Sie uns sprechen · Lever</title>
+  <meta name="description" content="Kontaktieren Sie Lever für ein kostenloses Erstgespräch. 15 Minuten, unverbindlich. Wir melden uns innerhalb von 24h." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
+    <section class="agent-hero">
+      <div class="container">
+        <div class="agent-hero__badge">📬 Kontakt</div>
+        <h1 class="agent-hero__title">Lassen Sie uns sprechen.</h1>
+        <p class="agent-hero__sub">15 Minuten. Kostenlos. Unverbindlich.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════ 2-SPALTEN LAYOUT ════════════════════════════════ -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ── LINKE SPALTE: Kontaktinfos ── -->
+          <aside>
+            <div class="contact-info">
+
+              <div>
+                <p class="contact-info__heading">Direkt erreichbar</p>
+              </div>
+
+              <ul class="contact-list">
+                <li class="contact-list__item">
+                  <span class="contact-list__label">E-Mail</span>
+                  <span class="contact-list__val">
+                    <a href="mailto:kontakt@leverai.de">kontakt@leverai.de</a>
+                  </span>
+                </li>
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Telefon</span>
+                  <span class="contact-list__val">
+                    <a href="tel:+4915755839501">+49 157 55839501</a>
+                  </span>
+                </li>
+                <li class="contact-list__item">
+                  <span class="contact-list__label">Adresse</span>
+                  <span class="contact-list__val">
+                    Landhausstraße 35a<br>70190 Stuttgart
+                  </span>
+                </li>
+              </ul>
+
+              <hr class="contact-hr" />
+
+              <div>
+                <p class="contact-info__heading" style="margin-bottom:0.75rem;">Antwortzeit</p>
+                <p class="contact-response">
+                  Wir melden uns innerhalb von 24 Stunden — meist deutlich schneller.
+                </p>
+              </div>
+
+              <hr class="contact-hr" />
+
+              <ul class="contact-checks">
+                <li class="contact-check">
+                  <span class="contact-check__icon">✓</span>
+                  Kostenlose Ersteinschätzung
+                </li>
+                <li class="contact-check">
+                  <span class="contact-check__icon">✓</span>
+                  Technische Machbarkeit klären
+                </li>
+                <li class="contact-check">
+                  <span class="contact-check__icon">✓</span>
+                  ROI gemeinsam berechnen
+                </li>
+              </ul>
+
+            </div>
+          </aside>
+
+          <!-- ── RECHTE SPALTE: Formular ── -->
+          <div>
+            <h2 class="contact-form__title">Nachricht schreiben</h2>
+
+            <form
+              class="form form--contact"
+              action="https://formspree.io/f/PLACEHOLDER"
+              method="POST"
+            >
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="k-name">
+                    Name <span class="req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="k-name"
+                    name="name"
+                    placeholder="Max Mustermann"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="k-email">
+                    E-Mail <span class="req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="k-email"
+                    name="email"
+                    placeholder="max@unternehmen.de"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="k-company">Unternehmen</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="k-company"
+                  name="company"
+                  placeholder="Muster GmbH"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="k-interest">
+                  Ich interessiere mich für <span class="req" aria-hidden="true">*</span>
+                </label>
+                <select class="form-input" id="k-interest" name="interest" required>
+                  <option value="" disabled selected>Bitte wählen…</option>
+                  <option value="lead-agent">Lead-Agent</option>
+                  <option value="onboarding-agent">Onboarding-Agent</option>
+                  <option value="wissens-agent">Wissens-Agent</option>
+                  <option value="custom-agent">Custom Agent</option>
+                  <option value="allgemein">Allgemeine Anfrage</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="k-message">
+                  Nachricht <span class="req" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  class="form-textarea"
+                  id="k-message"
+                  name="message"
+                  rows="5"
+                  placeholder="Was beschäftigt Sie? Gerne auch mit Details zu Ihrem Prozess oder Use Case."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--lg">
+                  Nachricht senden →
+                </button>
+                <p class="form-hint">
+                  Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
