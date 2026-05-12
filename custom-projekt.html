@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Projekt — Ihre Anforderung. Unsere Lösung. · Lever</title>
+  <meta name="description" content="Kein Standard-Agent passt zu Ihrem Use Case? Lever entwickelt maßgeschneiderte KI-Lösungen — exakt auf Ihre Prozesse, Daten und Systeme zugeschnitten." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <style>
+    /* ── Scope: custom-projekt.html ── */
+
+    .page-custom .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 700px;
+    }
+
+    .page-custom .problem-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      font-size: 0.9375rem;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    .page-custom .problem-item__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f87171;
+      margin-top: 0.45rem;
+      flex-shrink: 0;
+    }
+
+    .page-custom .solution__intro {
+      font-size: 1.0625rem;
+      color: #555;
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-custom .kpi-boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 780px;
+    }
+
+    .page-custom .kpi-box {
+      background: #000;
+      border-radius: 16px;
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.625rem;
+    }
+
+    .page-custom .kpi-box__val {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #22c55e;
+      letter-spacing: -0.035em;
+      line-height: 1;
+    }
+
+    .page-custom .kpi-box__label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+    }
+
+    .page-custom .custom-cta {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      padding: 5rem 0;
+    }
+
+    .page-custom .custom-cta__inner {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .page-custom .custom-cta__title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #111;
+      line-height: 1.2;
+    }
+
+    .page-custom .custom-cta__text {
+      font-size: 1rem;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    .page-custom .btn--dark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .page-custom .btn--dark:hover {
+      background: #22c55e;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+    }
+
+    @media (max-width: 640px) {
+      .page-custom .kpi-boxes { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <main class="page-agent page-custom">
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
+    <section class="agent-hero">
+      <div class="container">
+        <a href="index.html" class="agent-back">← Zur Startseite</a>
+<h1 class="agent-hero__title">Ihre Anforderung.<br>Unsere Lösung.</h1>
+        <p class="agent-hero__sub">
+          Nicht jeder Prozess passt in eine Schublade. Wenn keiner unserer Standard-Agenten
+          Ihren Use Case trifft, entwickeln wir eine Lösung von Grund auf — exakt auf Ihre
+          Systeme, Ihre Daten und Ihre internen Abläufe zugeschnitten. Kein Kompromiss,
+          keine Umwege.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ PROBLEM ═══════════════════════════════════ -->
+    <section class="agent-section">
+      <div class="container">
+        <div class="agent-section__header">
+          <span class="section__label">Wann ein Custom Projekt sinnvoll ist</span>
+        </div>
+        <p class="solution__intro">
+          Vorgefertigte KI-Produkte lösen Standardprobleme — aber Ihr Unternehmen hat
+          gewachsene Strukturen, individuelle Systemlandschaften und spezifische Anforderungen,
+          die kein Off-the-shelf-Tool kennt. Genau hier fangen wir an.
+        </p>
+        <div class="problem-list">
+          <div class="problem-item">
+            <span class="problem-item__dot"></span>
+            Ihr Use Case ist zu spezifisch für Standard-Produkte
+          </div>
+          <div class="problem-item">
+            <span class="problem-item__dot"></span>
+            Interne Prozesse umfassen mehrere Systeme, die verbunden werden müssen
+          </div>
+          <div class="problem-item">
+            <span class="problem-item__dot"></span>
+            Compliance- oder Sicherheitsanforderungen schließen Cloud-Standardlösungen aus
+          </div>
+          <div class="problem-item">
+            <span class="problem-item__dot"></span>
+            Sie brauchen einen Agenten, der auf Ihren eigenen Daten und Ihrem eigenen Wissen aufbaut
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ ANSATZ ════════════════════════════════════ -->
+    <section class="agent-section agent-section--alt">
+      <div class="container">
+        <div class="agent-section__header">
+          <span class="section__label">Wie wir arbeiten</span>
+        </div>
+        <p class="solution__intro">
+          Wir beginnen nicht mit Technologie, sondern mit Verständnis. In einem strukturierten
+          Workshop analysieren wir Ihre Prozesse, identifizieren die kritischen Hebel und
+          definieren gemeinsam, was der Agent leisten soll — und was nicht. Erst dann bauen wir.
+          Das Ergebnis ist ein System, das sich in Ihre bestehende Infrastruktur einfügt, ohne
+          dass Sie etwas ersetzen oder migrieren müssen.
+        </p>
+        <div class="workflow" role="list">
+          <div class="workflow__step" role="listitem">
+            <div class="workflow__num">01</div>
+            <span class="workflow__label">Deep-Dive Workshop</span>
+            <span class="workflow__sub">Prozesse, Daten &amp; Systemlandschaft analysieren</span>
+          </div>
+          <span class="workflow__arrow" aria-hidden="true">→</span>
+          <div class="workflow__step" role="listitem">
+            <div class="workflow__num">02</div>
+            <span class="workflow__label">Konzeption &amp; Prototyp</span>
+            <span class="workflow__sub">Architektur planen, ersten Entwurf validieren</span>
+          </div>
+          <span class="workflow__arrow" aria-hidden="true">→</span>
+          <div class="workflow__step" role="listitem">
+            <div class="workflow__num">03</div>
+            <span class="workflow__label">Entwicklung &amp; Integration</span>
+            <span class="workflow__sub">Agent bauen und nahtlos einbinden</span>
+          </div>
+          <span class="workflow__arrow" aria-hidden="true">→</span>
+          <div class="workflow__step" role="listitem">
+            <div class="workflow__num">04</div>
+            <span class="workflow__label">Launch &amp; Optimierung</span>
+            <span class="workflow__sub">Live schalten und kontinuierlich verbessern</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ FEATURES ══════════════════════════════════ -->
+    <section class="agent-section">
+      <div class="container">
+        <div class="agent-section__header">
+          <span class="section__label">Was Sie bekommen</span>
+        </div>
+        <p class="solution__intro">
+          Jede Custom-Lösung, die wir entwickeln, ist vollständig dokumentiert, getestet und
+          so übergeben, dass Ihr Team sie eigenständig bedienen kann. Wir bleiben als Partner
+          im Hintergrund — für Weiterentwicklungen, Anpassungen und Support.
+        </p>
+        <ul class="features__grid">
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Vollständig auf Ihre Prozesse und Systeme zugeschnitten
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Integration in bestehende Tools, APIs &amp; Datenbanken
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Training auf Ihren eigenen Daten &amp; Ihrem Unternehmenswissen
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            DSGVO-konform — wahlweise Cloud oder On-Premise
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Skalierbare Architektur für zukünftige Anforderungen
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Vollständige Dokumentation &amp; Team-Schulung
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Laufende Betreuung &amp; Weiterentwicklung
+          </li>
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            Support mit Reaktionszeit unter 24 Stunden
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ KPIs ══════════════════════════════════════ -->
+    <section class="agent-section agent-section--alt">
+      <div class="container">
+        <div class="agent-section__header">
+          <span class="section__label">In Zahlen</span>
+        </div>
+        <div class="kpi-boxes">
+          <div class="kpi-box">
+            <div class="kpi-box__val">100%</div>
+            <div class="kpi-box__label">individuell — kein Baukasten, kein Kompromiss</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-box__val">6–12W</div>
+            <div class="kpi-box__label">von der ersten Analyse bis zum Launch</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-box__val">&lt;24h</div>
+            <div class="kpi-box__label">Support-Reaktionszeit nach Go-live</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CTA ════════════════════════════════════════ -->
+    <section class="custom-cta">
+      <div class="container">
+        <div class="custom-cta__inner">
+          <h2 class="custom-cta__title">Projekt anfragen</h2>
+          <p class="custom-cta__text">
+            Beschreiben Sie uns kurz Ihren Use Case — wir melden uns innerhalb von 24 Stunden
+            mit einer ersten Einschätzung und konkreten nächsten Schritten.
+          </p>
+          <a href="kontakt.html" class="btn--dark">Jetzt anfragen →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

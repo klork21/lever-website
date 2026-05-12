@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise — Vollständig nach euren Regeln · Lever</title>
+  <meta name="description" content="Lever baut Enterprise KI-Systeme die vollständig in eurer Infrastruktur laufen, auf euren Daten trainiert werden und nach euren Regeln funktionieren. On-Premise, Opensource-Modelle, Finetuning." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <style>
+    /* ── Scope: enterprise.html ── */
+
+    .page-enterprise {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* ─── Hero (dark) ────────────────────────────────────── */
+    .page-enterprise .e-hero {
+      background: #000;
+      padding: 100px 0 96px;
+    }
+
+    .page-enterprise .e-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 9999px;
+      padding: 0.3rem 0.875rem;
+      margin-bottom: 1.875rem;
+    }
+
+    .page-enterprise .e-hero__title {
+      font-size: clamp(2.75rem, 6vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      color: #fff;
+      line-height: 1.0;
+      margin-bottom: 1.5rem;
+      max-width: 720px;
+    }
+
+    .page-enterprise .e-hero__sub {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+      max-width: 580px;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-enterprise .e-hero__punch {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2.5rem;
+    }
+
+    .page-enterprise .e-hero__btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.9375rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #fff;
+      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .page-enterprise .e-hero__btn:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(34, 197, 94, 0.4);
+    }
+
+    /* ─── Shared layout helpers ─────────────────────────── */
+    .page-enterprise .e-section {
+      padding: 80px 0;
+      background: #fafafa;
+    }
+
+    .page-enterprise .e-section--white {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .page-enterprise .e-section--dark {
+      background: #0a0a0a;
+      padding: 80px 0;
+    }
+
+    .page-enterprise .e-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #16a34a;
+      margin-bottom: 1rem;
+    }
+
+    .page-enterprise .e-label--on-dark {
+      color: #22c55e;
+    }
+
+    .page-enterprise .e-title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+
+    .page-enterprise .e-title--on-dark {
+      color: #fff;
+    }
+
+    .page-enterprise .e-body {
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.85;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-enterprise .e-body--on-dark {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .page-enterprise .e-body:last-of-type {
+      margin-bottom: 3rem;
+    }
+
+    /* ─── 3-col Enterprise meaning cards ────────────────── */
+    .page-enterprise .e-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-enterprise .e-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .page-enterprise .e-card:hover {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 1px #22c55e, 0 8px 30px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .page-enterprise .e-card__num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+    }
+
+    .page-enterprise .e-card__title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+    }
+
+    .page-enterprise .e-card__text {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* ─── Dark section feature grid ─────────────────────── */
+    .page-enterprise .e-feats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .page-enterprise .e-feat {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .page-enterprise .e-feat__check {
+      color: #22c55e;
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+      line-height: 1;
+    }
+
+    .page-enterprise .e-feat__body strong {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .page-enterprise .e-feat__body span {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.65;
+    }
+
+    /* ─── 2-col cards (Opensource) ───────────────────────── */
+    .page-enterprise .e-two {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-enterprise .e-two-card {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .page-enterprise .e-two-card__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .page-enterprise .e-two-card__icon svg {
+      width: 1.125rem;
+      height: 1.125rem;
+      stroke: #16a34a;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .page-enterprise .e-two-card__title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+    }
+
+    .page-enterprise .e-two-card__text {
+      font-size: 0.875rem;
+      color: #555;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    /* ─── Light feature grid (Training) ─────────────────── */
+    .page-enterprise .e-feats-light {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .page-enterprise .e-feat-light {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .page-enterprise .e-feat-light__check {
+      color: #22c55e;
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+      line-height: 1;
+    }
+
+    .page-enterprise .e-feat-light__body strong {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .page-enterprise .e-feat-light__body span {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* ─── CTA (dark) ─────────────────────────────────────── */
+    .page-enterprise .e-cta {
+      background: #000;
+      padding: 100px 0;
+    }
+
+    .page-enterprise .e-cta__inner {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .page-enterprise .e-cta__title {
+      font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      line-height: 1.15;
+    }
+
+    .page-enterprise .e-cta__text {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+    }
+
+    .page-enterprise .e-cta__note {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.28);
+      font-style: italic;
+      margin-top: -0.25rem;
+    }
+
+    .page-enterprise .e-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.9375rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #fff;
+      margin-top: 0.5rem;
+      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .page-enterprise .e-cta__btn:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(34, 197, 94, 0.4);
+    }
+
+    /* ─── Responsive ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .page-enterprise .e-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-enterprise .e-hero {
+        padding: 72px 0 64px;
+      }
+
+      .page-enterprise .e-section,
+      .page-enterprise .e-section--white,
+      .page-enterprise .e-section--dark {
+        padding: 56px 0;
+      }
+
+      .page-enterprise .e-cta {
+        padding: 72px 0;
+      }
+
+      .page-enterprise .e-cards,
+      .page-enterprise .e-feats,
+      .page-enterprise .e-two,
+      .page-enterprise .e-feats-light {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <main class="page-enterprise">
+
+    <!-- ══════════════════════════════ HERO ══════════════════════════════════ -->
+    <section class="e-hero">
+      <div class="container">
+        <div class="e-hero__badge">Enterprise</div>
+        <h1 class="e-hero__title">Enterprise. Vollständig nach euren Regeln.</h1>
+        <p class="e-hero__sub">
+          Für Unternehmen mit besonderen Anforderungen bauen wir KI-Systeme, die vollständig
+          in eurer Infrastruktur laufen, auf euren Daten trainiert werden und nach euren Regeln
+          funktionieren.
+        </p>
+        <p class="e-hero__punch">Kein Standard. Kein Kompromiss.</p>
+        <a href="kontakt.html" class="e-hero__btn">Enterprise anfragen →</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ WAS ENTERPRISE BEDEUTET ═══════════════════════ -->
+    <section class="e-section">
+      <div class="container">
+        <span class="e-label">Was Enterprise bedeutet</span>
+        <h2 class="e-title">Nicht konfiguriert. Gebaut.</h2>
+        <p class="e-body">
+          Unsere Standard-Agenten sind für die meisten Unternehmen die richtige Wahl.
+          Enterprise ist etwas anderes. Es ist kein Paket das man bucht —
+          sondern ein Projekt das wir gemeinsam definieren, entwickeln und betreiben.
+        </p>
+        <p class="e-body">
+          Enterprise bedeutet: Ihr bestimmt wo die Daten liegen, welches Modell eingesetzt wird,
+          wie es trainiert wird und wie es in eure bestehende Infrastruktur eingebettet wird.
+          Wir setzen es um.
+        </p>
+
+        <div class="e-cards">
+
+          <div class="e-card">
+            <span class="e-card__num">01</span>
+            <p class="e-card__title">Vollständige Individualität</p>
+            <p class="e-card__text">
+              Kein vorgefertigtes System — alles wird auf eure Anforderungen zugeschnitten.
+              Von der Architektur bis zur Ausgabe.
+            </p>
+          </div>
+
+          <div class="e-card">
+            <span class="e-card__num">02</span>
+            <p class="e-card__title">Maximale Datensouveränität</p>
+            <p class="e-card__text">
+              Alle Daten, Modelle und Prozesse bleiben in eurer Infrastruktur.
+              Kein Datentransfer nach außen, keine externen Abhängigkeiten.
+            </p>
+          </div>
+
+          <div class="e-card">
+            <span class="e-card__num">03</span>
+            <p class="e-card__title">Dedizierter Support</p>
+            <p class="e-card__text">
+              Ihr habt einen direkten Ansprechpartner bei Lever —
+              kein Ticketsystem, keine Warteschlange, kein Bot.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ ON-PREMISE ════════════════════════════════ -->
+    <section class="e-section--dark">
+      <div class="container">
+        <span class="e-label e-label--on-dark">On-Premise</span>
+        <h2 class="e-title e-title--on-dark">Eure Infrastruktur. Eure Kontrolle.</h2>
+        <p class="e-body e-body--on-dark">
+          Bei On-Premise läuft nichts außer Haus. Der Agent wird direkt in eurer
+          eigenen Serverinfrastruktur aufgesetzt — vollständig isoliert von externen Diensten
+          und Cloud-Anbietern. Kein Datentransfer nach außen.
+          Keine Abhängigkeit von Drittanbietern. Keine Kompromisse beim Datenschutz.
+        </p>
+        <p class="e-body e-body--on-dark">
+          Das ist die richtige Wahl für Unternehmen in regulierten Branchen, mit sensiblen
+          Kundendaten oder mit internen Compliance-Vorgaben die Cloud-Lösungen ausschließen.
+          Wir übernehmen Setup, Integration und laufenden technischen Support —
+          direkt in eurer Umgebung.
+        </p>
+
+        <div class="e-feats">
+
+          <div class="e-feat">
+            <span class="e-feat__check">✓</span>
+            <div class="e-feat__body">
+              <strong>Kein Datentransfer nach außen</strong>
+              <span>Alle Verarbeitung findet intern statt — vollständig isoliert von externen Diensten.</span>
+            </div>
+          </div>
+
+          <div class="e-feat">
+            <span class="e-feat__check">✓</span>
+            <div class="e-feat__body">
+              <strong>Compliance-kompatibel</strong>
+              <span>Kompatibel mit bestehenden Sicherheitsrichtlinien und branchenspezifischen Vorgaben.</span>
+            </div>
+          </div>
+
+          <div class="e-feat">
+            <span class="e-feat__check">✓</span>
+            <div class="e-feat__body">
+              <strong>Vollständiges Setup durch Lever</strong>
+              <span>Wir übernehmen Einrichtung und Integration in eure bestehende Infrastruktur.</span>
+            </div>
+          </div>
+
+          <div class="e-feat">
+            <span class="e-feat__check">✓</span>
+            <div class="e-feat__body">
+              <strong>Laufender technischer Support</strong>
+              <span>Direkter Support von uns — kein Drittanbieter, kein Ticketsystem.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ OPENSOURCE MODELLE & FINETUNING ══════════════════ -->
+    <section class="e-section--white">
+      <div class="container">
+        <span class="e-label">Opensource Modelle &amp; Finetuning</span>
+        <h2 class="e-title">Das richtige Modell für eure Anforderungen.</h2>
+        <p class="e-body">
+          Nicht jedes Unternehmen braucht ein kommerzielles Sprachmodell. Und nicht jedes
+          kommerzielle Modell passt zu den Datenschutzanforderungen eines Enterprise-Kunden.
+          Deshalb arbeiten wir im Enterprise-Bereich auch mit leistungsstarken Opensource-Modellen
+          wie Llama oder Mistral — die vollständig in eurer Infrastruktur betrieben werden können,
+          ohne externe API-Abhängigkeiten.
+        </p>
+        <p class="e-body">
+          Wir übernehmen die Auswahl des richtigen Modells, die Konfiguration und das Prompting —
+          abgestimmt auf euren Use Case, eure Fachsprache und eure internen Prozesse.
+        </p>
+
+        <div class="e-two">
+
+          <div class="e-two-card">
+            <div class="e-two-card__icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <p class="e-two-card__title">Opensource Modelle</p>
+            <p class="e-two-card__text">
+              Llama, Mistral und weitere — lokal betrieben, ohne externe API-Kosten
+              und mit voller Datenkontrolle. Keine Abhängigkeit von kommerziellen Anbietern.
+            </p>
+          </div>
+
+          <div class="e-two-card">
+            <div class="e-two-card__icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
+              </svg>
+            </div>
+            <p class="e-two-card__title">Modell-Setup &amp; Prompt-Engineering</p>
+            <p class="e-two-card__text">
+              LLM-Auswahl, Prompt-Architektur und Kontextaufbau vollständig nach euren
+              Anforderungen — abgestimmt auf eure Fachsprache und internen Prozesse.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ TRAINING AUF KUNDENDATEN ════════════════════════ -->
+    <section class="e-section">
+      <div class="container">
+        <span class="e-label">Training auf Kundendaten</span>
+        <h2 class="e-title">Ein Modell das euer Unternehmen wirklich kennt.</h2>
+        <p class="e-body">
+          Generische Sprachmodelle kennen viel — aber nicht euer Unternehmen. Nicht eure Produkte,
+          nicht eure internen Prozesse, nicht eure Fachsprache, nicht die Lösungen die euer Team
+          in den letzten Jahren erarbeitet hat.
+        </p>
+        <p class="e-body">
+          Im Enterprise-Bereich trainieren wir Modelle direkt auf euren Daten. Das bedeutet:
+          Der Agent lernt aus euren Berichten, euren Dokumenten, euren historischen Entscheidungen —
+          und wird so zu einem System das wirklich auf euer Unternehmen zugeschnitten ist.
+          Kein generisches Modell, sondern eins das versteht wie ihr arbeitet.
+        </p>
+        <p class="e-body">
+          Alle Trainingsdaten bleiben selbstverständlich in eurer Infrastruktur.
+          Nichts verlässt euer Unternehmen.
+        </p>
+
+        <div class="e-feats-light">
+
+          <div class="e-feat-light">
+            <span class="e-feat-light__check">✓</span>
+            <div class="e-feat-light__body">
+              <strong>Training auf internen Daten</strong>
+              <span>Dokumente, Berichte und Prozessdaten werden direkt zur Modelloptimierung genutzt.</span>
+            </div>
+          </div>
+
+          <div class="e-feat-light">
+            <span class="e-feat-light__check">✓</span>
+            <div class="e-feat-light__body">
+              <strong>Fachsprache &amp; Entscheidungslogik</strong>
+              <span>Das Modell lernt eure Terminologie, Strukturen und unternehmensspezifische Logik.</span>
+            </div>
+          </div>
+
+          <div class="e-feat-light">
+            <span class="e-feat-light__check">✓</span>
+            <div class="e-feat-light__body">
+              <strong>Kontinuierliches Nachtraining</strong>
+              <span>Das Modell wächst mit eurem Unternehmen — neue Daten fließen laufend ein.</span>
+            </div>
+          </div>
+
+          <div class="e-feat-light">
+            <span class="e-feat-light__check">✓</span>
+            <div class="e-feat-light__body">
+              <strong>Trainingsdaten bleiben intern</strong>
+              <span>Vollständige Datensouveränität — alle Trainingsdaten verbleiben in eurer Infrastruktur.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ CTA ════════════════════════════════════ -->
+    <section class="e-cta">
+      <div class="container">
+        <div class="e-cta__inner">
+          <h2 class="e-cta__title">Enterprise ist kein Produkt — es ist ein Projekt.</h2>
+          <p class="e-cta__text">
+            Erzählt uns von euren Anforderungen. Wir prüfen gemeinsam was möglich ist
+            und wie eine Lösung für euch aussehen kann.
+          </p>
+          <p class="e-cta__note">Preise auf Anfrage — individuell kalkuliert.</p>
+          <a href="kontakt.html" class="e-cta__btn">Enterprise anfragen →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

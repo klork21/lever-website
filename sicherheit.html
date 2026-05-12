@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sicherheit & Datenschutz — Von Anfang an eingebaut · Lever</title>
+  <meta name="description" content="Lever baut KI-Systeme die DSGVO-konform, skalierbar und auf Wunsch vollständig on-premise betrieben werden können — Datenschutz als Grundlage, nicht als Nachbetrachtung." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <style>
+    /* ── Scope: sicherheit.html ── */
+
+    .page-security {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* ─── Hero ─────────────────────────────────────────── */
+    .page-security .s-hero {
+      padding: 96px 0 80px;
+      background: #fafafa;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .page-security .s-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #16a34a;
+      background: #dcfce7;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      border-radius: 9999px;
+      padding: 0.3rem 0.875rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .page-security .s-hero__title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #000;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      max-width: 640px;
+    }
+
+    .page-security .s-hero__sub {
+      font-size: 1.125rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    /* ─── Shared section layout ─────────────────────────── */
+    .page-security .s-section {
+      padding: 80px 0;
+      background: #fafafa;
+    }
+
+    .page-security .s-section--white {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .page-security .s-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #16a34a;
+      margin-bottom: 1rem;
+    }
+
+    .page-security .s-title {
+      font-size: clamp(1.625rem, 3vw, 2.125rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+
+    .page-security .s-body {
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.85;
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+
+    /* ─── Compliance cards ───────────────────────────────── */
+    .page-security .c-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-security .c-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .page-security .c-card__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .page-security .c-card__icon svg {
+      width: 1.125rem;
+      height: 1.125rem;
+      stroke: #16a34a;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .page-security .c-card__title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+    }
+
+    .page-security .c-card__text {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ─── Hosting cards ──────────────────────────────────── */
+    .page-security .h-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-security .h-card {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .page-security .h-card:hover {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 1px #22c55e, 0 8px 30px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .page-security .h-card--featured {
+      border-color: #22c55e;
+      background: #fff;
+    }
+
+    .page-security .h-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border-radius: 9999px;
+    }
+
+    .page-security .h-badge--green {
+      background: #dcfce7;
+      color: #16a34a;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .page-security .h-badge--gray {
+      background: #f3f4f6;
+      color: #4b5563;
+      border: 1px solid #e5e7eb;
+    }
+
+    .page-security .h-badge--dark {
+      background: #111;
+      color: #fff;
+      border: 1px solid #222;
+    }
+
+    .page-security .h-card__title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+    }
+
+    .page-security .h-card__text {
+      font-size: 0.875rem;
+      color: #555;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    /* ─── Scale section ──────────────────────────────────── */
+    .page-security .sc-body {
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.85;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-security .sc-body:last-of-type {
+      margin-bottom: 3rem;
+    }
+
+    .page-security .sc-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-security .sc-feat {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .page-security .sc-feat__check {
+      font-size: 1.125rem;
+      color: #22c55e;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .page-security .sc-feat__title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+    }
+
+    .page-security .sc-feat__text {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* ─── CTA ────────────────────────────────────────────── */
+    .page-security .s-cta {
+      background: #000;
+      padding: 100px 0;
+    }
+
+    .page-security .s-cta__inner {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .page-security .s-cta__title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .page-security .s-cta__text {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.75;
+    }
+
+    .page-security .s-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.875rem 1.875rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #fff;
+      color: #000;
+      margin-top: 0.5rem;
+      transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    }
+
+    .page-security .s-cta__btn:hover {
+      background: #22c55e;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* ─── Responsive ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .page-security .c-cards,
+      .page-security .h-cards,
+      .page-security .sc-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-security .c-cards,
+      .page-security .h-cards,
+      .page-security .sc-features {
+        grid-template-columns: 1fr;
+      }
+
+      .page-security .s-hero {
+        padding: 64px 0 56px;
+      }
+
+      .page-security .s-section,
+      .page-security .s-section--white {
+        padding: 56px 0;
+      }
+
+      .page-security .s-cta {
+        padding: 72px 0;
+      }
+    }
+  </style>
+
+  <main class="page-security">
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
+    <section class="s-hero">
+      <div class="container">
+        <div class="s-hero__badge">Sicherheit &amp; Datenschutz</div>
+        <h1 class="s-hero__title">Sicherheit, die mitwächst.</h1>
+        <p class="s-hero__sub">
+          Wir bauen KI-Systeme, die von Anfang an auf Datenschutz,
+          Compliance und Skalierbarkeit ausgelegt sind — nicht nachträglich.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ COMPLIANCE & RECHTLICHES ═══════════════════════ -->
+    <section class="s-section s-section--white">
+      <div class="container">
+        <span class="s-label">Compliance &amp; Rechtliches</span>
+        <h2 class="s-title">DSGVO &amp; EU AI Act — von Anfang an eingebaut.</h2>
+        <p class="s-body">
+          Datenschutz ist bei uns keine Nachbetrachtung. Alle Systeme die wir entwickeln
+          sind DSGVO-konform aufgebaut — von der Datenhaltung über die Verarbeitung
+          bis zur Ausgabe. Zusätzlich orientieren wir uns am EU AI Act, dem neuen
+          europäischen Rechtsrahmen für den verantwortungsvollen Einsatz von KI.
+        </p>
+        <p class="s-body">
+          Das bedeutet: Transparenz darüber was der Agent tut, klare Grenzen was er
+          nicht tut, und volle Nachvollziehbarkeit für euer Unternehmen.
+          Wir bauen keine Blackboxen — sondern Systeme die ihr versteht,
+          kontrolliert und verantworten könnt.
+        </p>
+
+        <div class="c-cards">
+
+          <div class="c-card">
+            <div class="c-card__icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <p class="c-card__title">DSGVO-konform</p>
+            <p class="c-card__text">
+              Datenhaltung, Verarbeitung und Ausgabe nach europäischem Datenschutzrecht —
+              ohne Kompromisse.
+            </p>
+          </div>
+
+          <div class="c-card">
+            <div class="c-card__icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <p class="c-card__title">EU AI Act</p>
+            <p class="c-card__text">
+              Transparente, nachvollziehbare KI-Systeme ohne versteckte Logik —
+              konform mit dem europäischen Rechtsrahmen für KI.
+            </p>
+          </div>
+
+          <div class="c-card">
+            <div class="c-card__icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <p class="c-card__title">Volle Kontrolle</p>
+            <p class="c-card__text">
+              Ihr bestimmt welche Daten verarbeitet werden — und welche nicht.
+              Datensouveränität bleibt bei euch.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ HOSTING-OPTIONEN ═══════════════════════════ -->
+    <section class="s-section">
+      <div class="container">
+        <span class="s-label">Hosting-Optionen</span>
+        <h2 class="s-title">Euer Hosting. Eure Entscheidung.</h2>
+        <p class="s-body">
+          Es gibt keine Einheitslösung wenn es um Datensicherheit geht. Deshalb bieten
+          wir drei Hosting-Optionen — abgestimmt auf eure Anforderungen, eure Branche
+          und euren Standort.
+        </p>
+
+        <div class="h-cards">
+
+          <!-- Azure EU -->
+          <div class="h-card h-card--featured">
+            <span class="h-badge h-badge--green">Empfohlen</span>
+            <p class="h-card__title">Azure EU — unser Standard</p>
+            <p class="h-card__text">
+              Alle Systeme laufen standardmäßig auf Microsoft Azure in europäischen
+              Rechenzentren. EU-Datenhaltung, hohe Verfügbarkeit und volle Konformität
+              mit dem EU AI Act. Die richtige Wahl für die meisten Unternehmen.
+            </p>
+          </div>
+
+          <!-- Schwarz Digits -->
+          <div class="h-card">
+            <span class="h-badge h-badge--gray">Made in Germany</span>
+            <p class="h-card__title">Schwarz Digits — deutsche Cloud</p>
+            <p class="h-card__text">
+              Für Unternehmen mit erhöhten Anforderungen an den Datenspeicherort bieten
+              wir Hosting über Schwarz Digits — eine der führenden deutschen Cloud-Lösungen.
+              Alle Daten bleiben auf deutschem Boden, unter deutschem Recht.
+            </p>
+          </div>
+
+          <!-- On-Premise -->
+          <div class="h-card">
+            <span class="h-badge h-badge--dark">Enterprise</span>
+            <p class="h-card__title">On-Premise — maximale Kontrolle</p>
+            <p class="h-card__text">
+              Für Unternehmen mit besonderen Sicherheitsanforderungen setzen wir den
+              Agenten direkt in eurer eigenen Infrastruktur auf. Keine externen Server,
+              keine Cloud-Abhängigkeit — vollständige Datensouveränität.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SKALIERUNG & MULTIUSER ═════════════════════════ -->
+    <section class="s-section s-section--white">
+      <div class="container">
+        <span class="s-label">Skalierung &amp; Multiuser</span>
+        <h2 class="s-title">Gebaut um zu wachsen.</h2>
+        <p class="sc-body">
+          KI-Systeme die nur für einen einzelnen Nutzer funktionieren sind im
+          Unternehmensalltag schnell an ihre Grenzen gestoßen. Deshalb denken wir
+          Skalierung und Mehrbenutzerfähigkeit von Anfang an mit — nicht als
+          nachträgliches Feature, sondern als Grundlage jedes Systems das wir bauen.
+        </p>
+        <p class="sc-body">
+          Ob fünf oder fünfhundert Nutzer: Unsere Systeme sind so aufgebaut dass sie
+          mitwachsen. Rollenverwaltung, Zugriffsrechte und Nutzerhierarchien sind von
+          Beginn an Teil der Architektur. Jeder Nutzer sieht nur was er sehen darf —
+          nicht mehr und nicht weniger.
+        </p>
+        <p class="sc-body">
+          Das bedeutet für euch: Ihr startet klein, könnt aber jederzeit skalieren
+          ohne das System neu aufbauen zu müssen.
+        </p>
+
+        <div class="sc-features">
+
+          <div class="sc-feat">
+            <span class="sc-feat__check">✓</span>
+            <p class="sc-feat__title">Rollenbasierte Zugriffsrechte</p>
+            <p class="sc-feat__text">
+              Klare Trennung wer was sehen und tun darf — granular konfigurierbar,
+              ohne technischen Aufwand.
+            </p>
+          </div>
+
+          <div class="sc-feat">
+            <span class="sc-feat__check">✓</span>
+            <p class="sc-feat__title">Multiuser-fähig</p>
+            <p class="sc-feat__text">
+              Von Einzelnutzer bis unternehmensweitem Rollout — die Architektur
+              trägt beides von Anfang an.
+            </p>
+          </div>
+
+          <div class="sc-feat">
+            <span class="sc-feat__check">✓</span>
+            <p class="sc-feat__title">Skalierbare Architektur</p>
+            <p class="sc-feat__text">
+              Wächst mit eurem Unternehmen — ohne Umbau, ohne Neustart,
+              ohne Datenverlust.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ CTA ════════════════════════════════════ -->
+    <section class="s-cta">
+      <div class="container">
+        <div class="s-cta__inner">
+          <h2 class="s-cta__title">Fragen zur Sicherheit?</h2>
+          <p class="s-cta__text">
+            Wir erklären euch gerne wie wir eure Anforderungen konkret umsetzen.
+          </p>
+          <a href="kontakt.html" class="s-cta__btn">Gespräch anfragen →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

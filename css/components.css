@@ -20,6 +20,18 @@ body { background: #fafafa; }
   gap: var(--sp-16);
   padding-top: var(--sp-20);
   padding-bottom: var(--sp-20);
+  position: relative;
+  z-index: 1;
+}
+
+/* Wave-Illustration Hintergrund */
+.hero__wave-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero__content {
@@ -78,41 +90,6 @@ body { background: #fafafa; }
   margin-top: var(--sp-2);
 }
 
-/* ── SVG Waves ── */
-.hero__visual {
-  height: 580px;
-  display: flex;
-  align-items: center;
-}
-
-.hero__waves {
-  width: 100%;
-  height: 100%;
-  /* fade at left edge + top/bottom */
-  mask-image:
-    linear-gradient(to right,  transparent 0%, black 22%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-composite: intersect;
-  -webkit-mask-image:
-    linear-gradient(to right,  transparent 0%, black 22%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  -webkit-mask-composite: destination-in;
-  /* enter → then pulse */
-  opacity: 0;
-  animation:
-    waveEnter 1.8s ease-out forwards,
-    wavePulse  5s  ease-in-out 1.8s infinite;
-}
-
-@keyframes waveEnter {
-  from { opacity: 0; transform: translateX(28px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes wavePulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.68; }
-}
 
 /* ══════════════════════════════════════════════════════════
    TRUST BAR
@@ -158,6 +135,7 @@ body { background: #fafafa; }
 ══════════════════════════════════════════════════════════ */
 .agents { background: #ffffff; }
 
+/* 3-card layout: equal columns, full-width on desktop */
 .agents__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -165,12 +143,31 @@ body { background: #fafafa; }
   margin-bottom: var(--sp-6);
 }
 
+/* ── Alle KI-Lösungen button wrapper ── */
+.agents__view-all {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--sp-10);
+}
+
+.agents__view-all .btn--outline {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.agents__view-all .btn--outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
 /* ── Agent Card ── */
 .agent-card {
   background: #ffffff;
-  border: 1px solid var(--color-border);
+  border: 1px solid #d1d5db;
   border-radius: var(--radius-xl);
   padding: var(--sp-6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
@@ -182,7 +179,7 @@ body { background: #fafafa; }
 
 .agent-card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 1px var(--color-accent), var(--shadow-lg);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.12), 0 0 0 1px rgba(34, 197, 94, 0.2);
   transform: translateY(-3px);
 }
 
@@ -265,9 +262,10 @@ body { background: #fafafa; }
   justify-content: space-between;
   gap: var(--sp-10);
   background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
+  border: 1px solid #d1d5db;
   border-radius: var(--radius-xl);
   padding: var(--sp-8) var(--sp-10);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 .custom-block__title {
@@ -342,11 +340,12 @@ body { background: #fafafa; }
   max-width: 780px;
   margin: 0 auto;
   background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
+  border: 1px solid #d1d5db;
   border-radius: var(--radius-2xl);
   padding: var(--sp-10) var(--sp-12);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 .testimonial__bar {
@@ -451,7 +450,6 @@ body { background: #fafafa; }
   }
   .hero__content  { align-items: center; }
   .hero__badge    { align-self: center; }
-  .hero__visual   { display: none; }
   .hero__actions  { justify-content: center; }
 
   /* Trust */

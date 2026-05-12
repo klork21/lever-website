@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1440 680"
+     preserveAspectRatio="xMidYMid slice">
+  <defs>
+
+    <linearGradient id="fl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#fafafa" stop-opacity="1"/>
+      <stop offset="38%" stop-color="#fafafa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#fafafa" stop-opacity="0.65"/>
+      <stop offset="18%" stop-color="#fafafa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fafafa" stop-opacity="1"/>
+      <stop offset="14%" stop-color="#fafafa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fb" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#fafafa" stop-opacity="1"/>
+      <stop offset="14%" stop-color="#fafafa" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      .la { animation: bA 11s ease-in-out         infinite; }
+      .lb { animation: bB 13s ease-in-out  1.4s   infinite; }
+      .lc { animation: bC  9s ease-in-out  2.8s   infinite; }
+      .ld { animation: bB 14s ease-in-out  0.7s   infinite; }
+      .le { animation: bA 10s ease-in-out  2.1s   infinite; }
+      .lf { animation: bD 12s ease-in-out  3.5s   infinite; }
+      .lg { animation: bB 11s ease-in-out  4.2s   infinite; }
+
+      .da { animation: dP  8s ease-in-out         infinite; }
+      .db { animation: dP 10s ease-in-out  1.2s   infinite; }
+      .dc { animation: dP  7s ease-in-out  2.5s   infinite; }
+      .dd { animation: dP 11s ease-in-out  0.8s   infinite; }
+      .de { animation: dP  9s ease-in-out  1.8s   infinite; }
+
+      .ra { animation: rP  8s ease-in-out         infinite; }
+      .rb { animation: rP 10s ease-in-out  1.2s   infinite; }
+      .rc { animation: rP  7s ease-in-out  2.5s   infinite; }
+      .rd { animation: rP 11s ease-in-out  0.8s   infinite; }
+      .re { animation: rP  9s ease-in-out  1.8s   infinite; }
+
+      @keyframes bA {
+        0%,100% { opacity: 0.88; }
+        50%     { opacity: 0.08; }
+      }
+      @keyframes bB {
+        0%,100% { opacity: 0.75; }
+        50%     { opacity: 0.06; }
+      }
+      @keyframes bC {
+        0%,100% { opacity: 0.96; }
+        50%     { opacity: 0.10; }
+      }
+      @keyframes bD {
+        0%,100% { opacity: 0.80; }
+        50%     { opacity: 0.07; }
+      }
+      @keyframes dP {
+        0%,100% { opacity: 1.00; }
+        50%     { opacity: 0.12; }
+      }
+      @keyframes rP {
+        0%,100% { opacity: 0.35; r: 16px; }
+        50%     { opacity: 0.03; r:  8px; }
+      }
+    </style>
+  </defs>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE A — aufsteigend, mehrfach gewunden
+    Farbe: #4ade80 | leicht
+    ═══════════════════════════════════════════════
+  -->
+  <path class="la"
+    d="M -60 598
+       C  95 578,  215 548,  375 508
+       C  535 468,  635 398,  755 352
+       C  875 306, 1005 248, 1158 228
+       C 1292 212, 1408 218, 1500 212"
+    fill="none" stroke="#4ade80" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE B — absteigend, S-Kurve, kreuzt A ~x720
+    Farbe: #22c55e
+    ═══════════════════════════════════════════════
+  -->
+  <path class="lb"
+    d="M -60 106
+       C  95 118,  265 152,  420 185
+       C  575 218,  695 278,  800 322
+       C  905 366, 1008 398, 1145 412
+       C 1270 424, 1400 414, 1500 419"
+    fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE C — Hauptakzent, breite S-Schwingung
+    kreuzt A und B in der Mitte
+    Farbe: #16a34a | stärker
+    ═══════════════════════════════════════════════
+  -->
+  <path class="lc"
+    d="M -60 348
+       C  95 334,  245 300,  415 312
+       C  585 324,  712 385,  858 374
+       C 1004 363, 1148 298, 1298 316
+       C 1408 328, 1462 318, 1500 315"
+    fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE D — unterer Bereich, wellenförmig
+    kreuzt B im rechten Teil
+    Farbe: #86efac | sehr zart
+    ═══════════════════════════════════════════════
+  -->
+  <path class="ld"
+    d="M -60 490
+       C 108 500,  248 465,  408 474
+       C 568 483,  712 528,  872 514
+       C 1032 500, 1182 458, 1342 469
+       C 1438 476, 1474 462, 1500 458"
+    fill="none" stroke="#86efac" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE E — oberer Bereich, sanft fließend
+    kreuzt A leicht im rechten Drittel
+    Farbe: #86efac | sehr zart
+    ═══════════════════════════════════════════════
+  -->
+  <path class="le"
+    d="M -60 162
+       C 128 152,  298 144,  468 156
+       C 638 168,  778 194,  938 183
+       C 1098 172, 1248 146, 1388 158
+       C 1448 164, 1478 154, 1500 150"
+    fill="none" stroke="#86efac" stroke-width="0.9" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE F — obere Mitte, füllt Lücke zwischen E und C
+    Farbe: #4ade80
+    ═══════════════════════════════════════════════
+  -->
+  <path class="lf"
+    d="M -60 244
+       C 175 228,  415 265,  638 246
+       C 860 227, 1082 272, 1285 250
+       C 1402 236, 1460 246, 1500 242"
+    fill="none" stroke="#4ade80" stroke-width="1.3" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    LINIE G — zwischen C und D, kreuzt A rechts
+    Farbe: #22c55e
+    ═══════════════════════════════════════════════
+  -->
+  <path class="lg"
+    d="M -60 432
+       C 185 415,  418 455,  645 436
+       C 872 417, 1095 460, 1300 440
+       C 1412 428, 1465 436, 1500 432"
+    fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!--
+    ═══════════════════════════════════════════════
+    5 PUNKTE — Leerraum füllen
+    ═══════════════════════════════════════════════
+  -->
+
+  <!-- 1: oben rechts, zwischen E und B -->
+  <circle class="ra" cx="1082" cy="126" r="16" fill="#4ade80"/>
+  <circle class="da" cx="1082" cy="126" r="4.5" fill="#4ade80"/>
+
+  <!-- 2: Kreuzungsbereich A×B×C, Hauptpunkt -->
+  <circle class="rb" cx="645"  cy="316" r="14" fill="#16a34a"/>
+  <circle class="db" cx="645"  cy="316" r="5.5" fill="#16a34a"/>
+
+  <!-- 3: rechts zwischen C und B -->
+  <circle class="rc" cx="1282" cy="375" r="13" fill="#22c55e"/>
+  <circle class="dc" cx="1282" cy="375" r="4"  fill="#22c55e"/>
+
+  <!-- 4: unten Mitte, unter D -->
+  <circle class="rd" cx="820"  cy="535" r="11" fill="#4ade80"/>
+  <circle class="dd" cx="820"  cy="535" r="3.5" fill="#4ade80"/>
+
+  <!-- 5: rechts tief, zwischen B und D -->
+  <circle class="re" cx="1142" cy="490" r="10" fill="#22c55e"/>
+  <circle class="de" cx="1142" cy="490" r="3"  fill="#22c55e"/>
+
+  <!-- FADE-MASKEN -->
+  <rect x="0" y="0" width="1440" height="680" fill="url(#fl)"/>
+  <rect x="0" y="0" width="1440" height="680" fill="url(#fr)"/>
+  <rect x="0" y="0" width="1440" height="680" fill="url(#ft)"/>
+  <rect x="0" y="0" width="1440" height="680" fill="url(#fb)"/>
+
+</svg>

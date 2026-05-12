@@ -19,17 +19,20 @@
 
     <!-- ════════════════════════════════ HERO ════════════════════════════════ -->
     <section class="hero">
+
+      <!-- Wave-Illustration als animierter Hintergrund -->
+      <object
+        class="hero__wave-bg"
+        type="image/svg+xml"
+        data="assets/images/wave-illustration.svg"
+        aria-hidden="true">
+      </object>
+
       <div class="container hero__container">
 
         <div class="hero__content">
-          <div class="badge badge--accent hero__badge">
-            <span class="hero__badge-dot"></span>
-            KI als Hebel · Stuttgart
-          </div>
-
           <h1 class="hero__headline">
-            KI-Agenten, die<br>
-            <span class="hero__highlight">wirklich</span> funktionieren.
+            The AI Layer to <span class="hero__highlight">leverage</span> your Business.
           </h1>
 
           <p class="hero__sub">
@@ -39,46 +42,9 @@
 
           <div class="hero__actions">
             <a href="kontakt.html" class="btn btn--primary btn--lg">Erstgespräch buchen</a>
-            <a href="agenten.html" class="btn btn--outline btn--lg">Agenten entdecken →</a>
           </div>
         </div>
 
-        <!-- SVG Wave Illustration -->
-        <div class="hero__visual" aria-hidden="true">
-          <svg
-            class="hero__waves"
-            viewBox="0 0 700 680"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <!-- Wave 1 – lightest, thinnest -->
-            <path
-              d="M -60,105 C 55,80 200,132 370,102 C 520,75 640,128 760,108"
-              stroke="#bbf7d0" stroke-width="1" stroke-linecap="round"
-            />
-            <!-- Wave 2 -->
-            <path
-              d="M 0,210 C 80,178 240,248 410,212 C 560,180 668,242 760,222"
-              stroke="#86efac" stroke-width="1.5" stroke-linecap="round"
-            />
-            <!-- Wave 3 – mid -->
-            <path
-              d="M -40,330 C 70,290 235,374 415,328 C 575,285 672,368 760,338"
-              stroke="#bbf7d0" stroke-width="1" stroke-linecap="round"
-            />
-            <!-- Wave 4 -->
-            <path
-              d="M 0,452 C 88,416 250,492 430,450 C 590,412 678,484 760,460"
-              stroke="#86efac" stroke-width="2.5" stroke-linecap="round"
-            />
-            <!-- Wave 5 – strongest, darkest -->
-            <path
-              d="M -30,572 C 82,534 248,614 435,568 C 598,526 682,600 760,578"
-              stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"
-            />
-          </svg>
-        </div>
 
       </div>
     </section>
@@ -87,10 +53,6 @@
     <div class="trust-bar">
       <div class="container">
         <ul class="trust-bar__list">
-          <li class="trust-bar__item">
-            <span class="trust-bar__check">✓</span> 15+ Projekte
-          </li>
-          <li class="trust-bar__divider" aria-hidden="true"></li>
           <li class="trust-bar__item">
             <span class="trust-bar__check">✓</span> 100% DSGVO
           </li>
@@ -121,90 +83,78 @@
 
         <div class="agents__grid">
 
-          <!-- Lead Agent -->
+          <!-- Lead-Gen Specialist -->
           <article class="agent-card">
             <div class="agent-card__header">
               <div class="agent-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="m21 21-4.35-4.35"/>
-                  <path d="M11 8v6M8 11h6"/>
-                </svg>
+                <img src="assets/icons/agents/lead-gen-specialist.svg" width="40" height="40" alt="Lead-Gen Specialist">
               </div>
-              <span class="agent-card__label">Lead Agent</span>
+              <span class="agent-card__label">Lead-Gen Specialist</span>
             </div>
-            <h3 class="agent-card__title">Automatische Lead-Qualifizierung</h3>
+            <h3 class="agent-card__title">Von der leeren Liste zum gebuchten Termin.</h3>
             <p class="agent-card__desc">
-              Eingehende Leads werden automatisch bewertet, angereichert und ins CRM übergeben — ohne manuelle Datenpflege.
+              Recherchiert, qualifiziert und schreibt Leads automatisch an — damit Ihr Vertrieb sich auf Abschlüsse konzentriert, nicht auf Vorbereitung.
             </p>
             <ul class="agent-card__tags">
-              <li class="agent-card__tag">– 12h / Woche</li>
-              <li class="agent-card__tag">&lt; 5 Min im CRM</li>
-              <li class="agent-card__tag">HubSpot · Salesforce</li>
+              <li class="agent-card__tag">Websuche &amp; Maps</li>
+              <li class="agent-card__tag">Personalisierte Mails</li>
+              <li class="agent-card__tag">Direktbuchung</li>
             </ul>
-            <a href="lead-agent.html" class="agent-card__link">Mehr erfahren →</a>
+            <a href="lead-gen-specialist.html" class="agent-card__link">Mehr erfahren →</a>
           </article>
 
-          <!-- Onboarding Agent -->
+          <!-- Corporate Brain -->
           <article class="agent-card">
             <div class="agent-card__header">
               <div class="agent-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
-                </svg>
+                <img src="assets/icons/agents/corporate-brain.svg" width="40" height="40" alt="Corporate Brain">
               </div>
-              <span class="agent-card__label">Onboarding Agent</span>
+              <span class="agent-card__label">Corporate Brain</span>
             </div>
-            <h3 class="agent-card__title">Interaktive Nutzerbegleitung</h3>
+            <h3 class="agent-card__title">Euer Unternehmenswissen. Immer verfügbar.</h3>
             <p class="agent-card__desc">
-              Neue Nutzer werden Schritt für Schritt durch die Plattform geführt — kontextbezogen, reaktiv und ohne Support-Aufwand.
+              Verbindet alle Datenquellen und liefert Antworten auf Basis echter Unternehmensdaten — mit Quellenangabe, in Sekunden.
             </p>
             <ul class="agent-card__tags">
-              <li class="agent-card__tag">+ 40% Aktivierung</li>
-              <li class="agent-card__tag">– 60% Tickets</li>
-              <li class="agent-card__tag">In-App</li>
+              <li class="agent-card__tag">Mit Quellenangabe</li>
+              <li class="agent-card__tag">API-Anbindung</li>
+              <li class="agent-card__tag">Kein Wissensverlust</li>
             </ul>
-            <a href="onboarding-agent.html" class="agent-card__link">Mehr erfahren →</a>
+            <a href="corporate-brain.html" class="agent-card__link">Mehr erfahren →</a>
           </article>
 
-          <!-- Wissens-Agent -->
+          <!-- Report & Insights Agent -->
           <article class="agent-card">
             <div class="agent-card__header">
               <div class="agent-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                  <path d="M3 5v4c0 1.657 4.03 3 9 3s9-1.343 9-3V5"/>
-                  <path d="M3 9v4c0 1.657 4.03 3 9 3s9-1.343 9-3V9"/>
-                  <path d="M3 13v4c0 1.657 4.03 3 9 3s9-1.343 9-3v-4"/>
-                </svg>
+                <img src="assets/icons/agents/report-insights-agent.svg" width="40" height="40" alt="Report Insights Agent">
               </div>
-              <span class="agent-card__label">Wissens-Agent</span>
+              <span class="agent-card__label">Report &amp; Insights Agent</span>
             </div>
-            <h3 class="agent-card__title">RAG aus historischen Daten</h3>
+            <h3 class="agent-card__title">Berichte schreiben, die von Erfahrung lernen.</h3>
             <p class="agent-card__desc">
-              Retrieval-Augmented Generation über Ihre Betriebsdaten — relevante Lösungsvorschläge in Sekunden statt stundenlanger Suche.
+              Erstellt strukturierte Berichte auf Basis historischer Beispiele und überträgt das Wissen erfahrener Mitarbeiter auf neue Kollegen.
             </p>
             <ul class="agent-card__tags">
-              <li class="agent-card__tag">– 70% Lösungszeit</li>
-              <li class="agent-card__tag">– 80% Berichtszeit</li>
-              <li class="agent-card__tag">ValueStreamer</li>
+              <li class="agent-card__tag">Historische Beispiele</li>
+              <li class="agent-card__tag">Stil-angepasst</li>
+              <li class="agent-card__tag">Lernfähig</li>
             </ul>
-            <a href="wissens-agent.html" class="agent-card__link">Mehr erfahren →</a>
+            <a href="report-insights-agent.html" class="agent-card__link">Mehr erfahren →</a>
           </article>
 
         </div>
 
-        <!-- Custom Agents Block -->
+<!-- Custom Agents Block -->
         <div class="custom-block">
           <div class="custom-block__content">
-            <span class="section__label">Custom Agents</span>
-            <h3 class="custom-block__title">Ihr Prozess. Ihr Agent.</h3>
+            <span class="section__label">Custom Projekt</span>
+            <h3 class="custom-block__title">Ihr Prozess. Ihre Lösung.</h3>
             <p class="custom-block__desc">
-              Kein Prozess ist identisch. Wir entwickeln Agenten, die exakt auf Ihre Anforderungen zugeschnitten sind — integriert in Ihre bestehende Infrastruktur.
+              Kein Prozess ist identisch. Wir entwickeln KI-Lösungen, die exakt auf Ihre Anforderungen zugeschnitten sind — integriert in Ihre bestehende Infrastruktur.
             </p>
           </div>
-          <a href="custom-agents.html" class="btn btn--outline btn--lg custom-block__cta">Anfragen →</a>
+          <a href="custom-projekt.html" class="btn btn--outline btn--lg custom-block__cta">Anfragen →</a>
         </div>
 
       </div>

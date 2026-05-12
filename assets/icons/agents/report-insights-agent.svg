@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+fill="none" stroke="#22c55e" stroke-width="1.8"
+stroke-linecap="round" stroke-linejoin="round">
+  <!-- Achsen -->
+  <line x1="8" y1="8" x2="8" y2="40"/>
+  <line x1="8" y1="40" x2="42" y2="40"/>
+  <!-- 3 aufsteigende Balken -->
+  <rect x="12" y="30" width="8" height="10" rx="2"/>
+  <rect x="22" y="22" width="8" height="18" rx="2"/>
+  <rect x="32" y="15" width="8" height="25" rx="2"/>
+</svg>

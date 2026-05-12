@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Transparente Preisstruktur · Lever</title>
+  <meta name="description" content="Keine Preisliste von der Stange. Klare Struktur, individuelles Angebot — für jedes Projekt ehrlich und transparent kalkuliert." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <style>
+    /* ── Scope: pricing.html ── */
+
+    /* ── Hero ── */
+    .page-pricing .pr-hero {
+      background: #fafafa;
+      padding: 120px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .page-pricing .pr-hero__label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-pricing .pr-hero__title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #000;
+      line-height: 1.1;
+      max-width: 740px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .page-pricing .pr-hero__sub {
+      font-size: 1.0625rem;
+      color: #888;
+      line-height: 1.85;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* ── Warum keine festen Preise ── */
+    .page-pricing .pr-why {
+      padding: 80px 0;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .page-pricing .pr-why__inner {
+      max-width: 700px;
+    }
+
+    .page-pricing .pr-why__label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 0.875rem;
+    }
+
+    .page-pricing .pr-why__title {
+      font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+
+    .page-pricing .pr-why__body p {
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.9;
+      margin-bottom: 1.375rem;
+    }
+
+    .page-pricing .pr-why__body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Drei Stufen ── */
+    .page-pricing .pr-steps {
+      padding: 80px 0;
+      background: #fafafa;
+    }
+
+    .page-pricing .pr-steps__header {
+      margin-bottom: 3rem;
+    }
+
+    .page-pricing .pr-steps__label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 0.875rem;
+    }
+
+    .page-pricing .pr-steps__title {
+      font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-pricing .pr-steps__sub {
+      font-size: 0.9375rem;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    /* Cards grid */
+    .page-pricing .pr-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .page-pricing .pr-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-pricing .pr-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+    }
+
+    .page-pricing .pr-card__num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #d1d5db;
+    }
+
+    /* Badges */
+    .page-pricing .pr-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .page-pricing .pr-badge--green {
+      background: #22c55e;
+      color: #fff;
+    }
+
+    .page-pricing .pr-badge--black {
+      background: #000;
+      color: #fff;
+    }
+
+    .page-pricing .pr-badge--gray {
+      background: #888;
+      color: #fff;
+    }
+
+    .page-pricing .pr-card__title {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #000;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .page-pricing .pr-card__text {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    /* ── Enterprise (dark) ── */
+    .page-pricing .pr-enterprise {
+      padding: 80px 0;
+      background: #000;
+    }
+
+    .page-pricing .pr-enterprise__inner {
+      max-width: 680px;
+    }
+
+    .page-pricing .pr-enterprise__label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 0.875rem;
+    }
+
+    .page-pricing .pr-enterprise__title {
+      font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-pricing .pr-enterprise__text {
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── CTA / Abschluss ── */
+    .page-pricing .pr-cta {
+      padding: 80px 0;
+      background: #fafafa;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .page-pricing .pr-cta__title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-pricing .pr-cta__text {
+      font-size: 1rem;
+      color: #888;
+      line-height: 1.8;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* ── Buttons ── */
+    .page-pricing .pr-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.875rem 1.875rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .page-pricing .pr-btn:hover {
+      background: #22c55e;
+      border-color: #22c55e;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+    }
+
+    /* Outlined button on dark background */
+    .page-pricing .pr-btn--outline-light {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .page-pricing .pr-btn--outline-light:hover {
+      background: transparent;
+      color: #22c55e;
+      border-color: #22c55e;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .page-pricing .pr-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-pricing .pr-hero {
+        padding: 100px 0 60px;
+      }
+    }
+  </style>
+
+  <main class="page-agent page-pricing">
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
+    <section class="pr-hero">
+      <div class="container">
+        <span class="pr-hero__label">Pricing</span>
+        <h1 class="pr-hero__title">Transparent in der Struktur. Individuell im Preis.</h1>
+        <p class="pr-hero__sub">
+          Jedes KI-Projekt ist anders — deshalb gibt es bei uns keine
+          Preisliste von der Stange. Was es gibt: eine klare, nachvollziehbare
+          Struktur die für jedes Projekt gleich ist.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ WARUM KEINE FESTEN PREISE ═════════════════════ -->
+    <section class="pr-why">
+      <div class="container">
+        <div class="pr-why__inner">
+          <span class="pr-why__label">Hintergrund</span>
+          <h2 class="pr-why__title">Warum wir keine festen Preise nennen.</h2>
+          <div class="pr-why__body">
+            <p>
+              Ein KI-Agent für ein fünfköpfiges Handwerksunternehmen ist ein anderes
+              Projekt als ein eingebettetes System für eine Software mit tausend Nutzern.
+              Komplexität, Integrationsaufwand, Datenquellen, Nutzerzahl —
+              all das beeinflusst den Aufwand und damit den Preis.
+            </p>
+            <p>
+              Feste Pauschalpreise wären in diesem Kontext entweder zu teuer für kleine
+              Projekte oder zu günstig für komplexe Anforderungen. Beides wäre unfair.
+            </p>
+            <p>
+              Was wir stattdessen bieten: eine transparente Preisstruktur die für
+              jedes Projekt gleich aufgebaut ist — und ein individuelles Angebot
+              das genau zu euren Anforderungen passt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ DIE DREI STUFEN ═══════════════════════════════ -->
+    <section class="pr-steps">
+      <div class="container">
+        <div class="pr-steps__header">
+          <span class="pr-steps__label">Preisstruktur</span>
+          <h2 class="pr-steps__title">So ist jedes Projekt aufgebaut.</h2>
+          <p class="pr-steps__sub">Drei Stufen, immer gleich — der Preis variiert, die Struktur nicht.</p>
+        </div>
+
+        <div class="pr-cards">
+
+          <!-- Card 01 -->
+          <div class="pr-card">
+            <div class="pr-card__top">
+              <span class="pr-card__num">01</span>
+              <span class="pr-badge pr-badge--green">Einmalig</span>
+            </div>
+            <h3 class="pr-card__title">Implementierung</h3>
+            <p class="pr-card__text">
+              Wir analysieren eure Anforderungen, wählen das passende Modell,
+              konfigurieren den Agenten und integrieren ihn in eure bestehende
+              Infrastruktur. Einmalige Investition — danach läuft euer Agent.
+            </p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="pr-card">
+            <div class="pr-card__top">
+              <span class="pr-card__num">02</span>
+              <span class="pr-badge pr-badge--black">Monatlich</span>
+            </div>
+            <h3 class="pr-card__title">Hosting &amp; Betrieb</h3>
+            <p class="pr-card__text">
+              Wir betreiben euren Agenten, sorgen für Verfügbarkeit, Sicherheit
+              und technischen Betrieb. Planbare monatliche Kosten —
+              transparent, ohne versteckte Gebühren.
+            </p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="pr-card">
+            <div class="pr-card__top">
+              <span class="pr-card__num">03</span>
+              <span class="pr-badge pr-badge--gray">Variabel</span>
+            </div>
+            <h3 class="pr-card__title">Skalierung</h3>
+            <p class="pr-card__text">
+              Wächst euer Team oder eure Nutzerbasis, wächst der Agent mit.
+              Die Kosten skalieren transparent mit eurer Nutzerzahl —
+              ihr zahlt nur für das was ihr tatsächlich nutzt.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ ENTERPRISE (DARK) ═════════════════════════════ -->
+    <section class="pr-enterprise">
+      <div class="container">
+        <div class="pr-enterprise__inner">
+          <span class="pr-enterprise__label">Enterprise</span>
+          <h2 class="pr-enterprise__title">Enterprise — individuell nach Projektumfang.</h2>
+          <p class="pr-enterprise__text">
+            Für Unternehmen mit besonderen Anforderungen — On-Premise-Deployment,
+            Training auf eigenen Daten oder komplexe Systemintegrationen —
+            gelten eigene Konditionen. Enterprise-Projekte werden vollständig
+            individuell kalkuliert. Umfang, Komplexität und Anforderungen
+            bestimmen den Preis — nicht eine Preisliste.
+          </p>
+          <a href="enterprise.html" class="pr-btn pr-btn--outline-light">Mehr zu Enterprise →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CTA ════════════════════════════════════════ -->
+    <section class="pr-cta">
+      <div class="container">
+        <h2 class="pr-cta__title">Euer Projekt, euer Angebot.</h2>
+        <p class="pr-cta__text">
+          Erzählt uns was ihr braucht. Wir schauen es uns an und erstellen
+          ein individuelles Angebot — ehrlich kalkuliert, ohne versteckte Kosten.
+        </p>
+        <a href="kontakt.html" class="pr-btn">Angebot anfragen →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

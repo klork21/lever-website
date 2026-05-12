@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+fill="none" stroke="#22c55e" stroke-width="1.8"
+stroke-linecap="round" stroke-linejoin="round">
+  <!-- Aufwärts-Pfeil in Kreis = Wachstum -->
+  <circle cx="24" cy="24" r="18"/>
+  <!-- Pfeil nach oben -->
+  <line x1="24" y1="32" x2="24" y2="14"/>
+  <polyline points="16,22 24,14 32,22"/>
+  <!-- Kleine Linie unten = Basis -->
+  <line x1="18" y1="35" x2="30" y2="35"/>
+</svg>
