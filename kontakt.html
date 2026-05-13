@@ -31,7 +31,13 @@
         <div class="contact-grid">
 
           <!-- ── LINKE SPALTE: Kontaktinfos ── -->
-          <aside>
+          <aside class="contact-info-panel">
+
+            <div>
+              <div class="contact-panel__brand">Lever</div>
+              <p class="contact-panel__tagline">KI-Agenten für den Mittelstand</p>
+            </div>
+
             <div class="contact-info">
 
               <div>
@@ -89,13 +95,15 @@
           </aside>
 
           <!-- ── RECHTE SPALTE: Formular ── -->
-          <div>
+          <div class="contact-form-panel">
+            <span class="contact-form__badge">Kontaktformular</span>
             <h2 class="contact-form__title">Nachricht schreiben</h2>
 
             <form
               class="form form--contact"
-              action="https://formspree.io/f/PLACEHOLDER"
+              name="kontakt"
               method="POST"
+              data-netlify="true"
             >
 
               <div class="form-row">

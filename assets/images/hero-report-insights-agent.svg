@@ -1,0 +1,96 @@
+<svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" width="600" height="500">
+  <defs>
+    <linearGradient id="ri-fl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="32%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ri-fr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="0.7"/>
+      <stop offset="20%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ri-ft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ri-fb" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .ri-la { animation: ri-bA 11s ease-in-out        infinite; }
+      .ri-lb { animation: ri-bB 13s ease-in-out  1.4s  infinite; }
+      .ri-lc { animation: ri-bC  9s ease-in-out  2.8s  infinite; }
+      .ri-ld { animation: ri-bB 14s ease-in-out  0.7s  infinite; }
+      .ri-le { animation: ri-bA 10s ease-in-out  2.1s  infinite; }
+      .ri-lf { animation: ri-bD 12s ease-in-out  3.5s  infinite; }
+      .ri-lg { animation: ri-bB 15s ease-in-out  1.0s  infinite; }
+      .ri-da { animation: ri-dP  8s ease-in-out        infinite; }
+      .ri-db { animation: ri-dP 10s ease-in-out  1.2s  infinite; }
+      .ri-dc { animation: ri-dP  7s ease-in-out  2.5s  infinite; }
+      .ri-dd { animation: ri-dP  9s ease-in-out  3.0s  infinite; }
+      .ri-ra { animation: ri-rP  8s ease-in-out        infinite; }
+      .ri-rb { animation: ri-rP 10s ease-in-out  1.2s  infinite; }
+      .ri-rc { animation: ri-rP  7s ease-in-out  2.5s  infinite; }
+      .ri-rd { animation: ri-rP  9s ease-in-out  3.0s  infinite; }
+      @keyframes ri-bA { 0%,100%{opacity:0.88} 50%{opacity:0.08} }
+      @keyframes ri-bB { 0%,100%{opacity:0.75} 50%{opacity:0.06} }
+      @keyframes ri-bC { 0%,100%{opacity:0.96} 50%{opacity:0.10} }
+      @keyframes ri-bD { 0%,100%{opacity:0.80} 50%{opacity:0.07} }
+      @keyframes ri-dP { 0%,100%{opacity:1.00} 50%{opacity:0.12} }
+      @keyframes ri-rP { 0%,100%{opacity:0.30;r:16px} 50%{opacity:0.03;r:8px} }
+    </style>
+  </defs>
+
+  <!--
+    Bar chart — icon shape scaled up.
+    Y-axis left, X-axis bottom, 4 ascending stroked bars.
+    Bars animate independently; trend line connects bar tops.
+  -->
+
+  <!-- Y-axis -->
+  <line class="ri-la" x1="80"  y1="50"  x2="80"  y2="430" stroke="#86efac" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- X-axis -->
+  <line class="ri-la" x1="80"  y1="430" x2="560" y2="430" stroke="#86efac" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Horizontal grid lines (subtle) -->
+  <line class="ri-lf" x1="80" y1="340" x2="560" y2="340" stroke="#86efac" stroke-width="0.7" stroke-dasharray="4 6"/>
+  <line class="ri-lg" x1="80" y1="250" x2="560" y2="250" stroke="#86efac" stroke-width="0.7" stroke-dasharray="4 6"/>
+  <line class="ri-lf" x1="80" y1="160" x2="560" y2="160" stroke="#86efac" stroke-width="0.7" stroke-dasharray="4 6"/>
+
+  <!-- Bar 1 — short -->
+  <rect class="ri-lb" x="110" y="350" width="75" height="80" rx="4"
+        stroke="#4ade80" stroke-width="1.4" fill="none"/>
+  <!-- Bar 2 — medium -->
+  <rect class="ri-lc" x="215" y="260" width="75" height="170" rx="4"
+        stroke="#22c55e" stroke-width="2.2" fill="none"/>
+  <!-- Bar 3 — tall -->
+  <rect class="ri-ld" x="320" y="155" width="75" height="275" rx="4"
+        stroke="#16a34a" stroke-width="2.0" fill="none"/>
+  <!-- Bar 4 — tallest -->
+  <rect class="ri-le" x="425" y="85"  width="75" height="345" rx="4"
+        stroke="#4ade80" stroke-width="1.4" fill="none"/>
+
+  <!-- Trend line connecting bar tops — smooth curve -->
+  <path class="ri-lf"
+    d="M 147 350 C 220 310, 295 255, 357 155 C 395 100, 440 88, 462 85"
+    stroke="#22c55e" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- Nodes at bar tops -->
+  <circle class="ri-ra" cx="147" cy="350" r="14" fill="#4ade80"/>
+  <circle class="ri-da" cx="147" cy="350" r="4.5" fill="#4ade80"/>
+
+  <circle class="ri-rb" cx="252" cy="260" r="13" fill="#22c55e"/>
+  <circle class="ri-db" cx="252" cy="260" r="5"  fill="#22c55e"/>
+
+  <circle class="ri-rc" cx="357" cy="155" r="13" fill="#16a34a"/>
+  <circle class="ri-dc" cx="357" cy="155" r="5"  fill="#16a34a"/>
+
+  <circle class="ri-rd" cx="462" cy="85"  r="14" fill="#22c55e"/>
+  <circle class="ri-dd" cx="462" cy="85"  r="5.5" fill="#22c55e"/>
+
+  <!-- Edge fades -->
+  <rect x="0" y="0" width="600" height="500" fill="url(#ri-fl)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#ri-fr)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#ri-ft)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#ri-fb)"/>
+</svg>

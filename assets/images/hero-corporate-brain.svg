@@ -1,0 +1,100 @@
+<svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" width="600" height="500">
+  <defs>
+    <linearGradient id="cb-fl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="32%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cb-fr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="0.7"/>
+      <stop offset="20%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cb-ft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cb-fb" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .cb-la { animation: cb-bA 11s ease-in-out        infinite; }
+      .cb-lb { animation: cb-bB 13s ease-in-out  1.4s  infinite; }
+      .cb-lc { animation: cb-bC  9s ease-in-out  2.8s  infinite; }
+      .cb-ld { animation: cb-bB 14s ease-in-out  0.7s  infinite; }
+      .cb-le { animation: cb-bA 10s ease-in-out  2.1s  infinite; }
+      .cb-lf { animation: cb-bD 12s ease-in-out  3.5s  infinite; }
+      .cb-lg { animation: cb-bB 11s ease-in-out  4.2s  infinite; }
+      .cb-lh { animation: cb-bC 15s ease-in-out  1.0s  infinite; }
+      .cb-li { animation: cb-bA 13s ease-in-out  5.5s  infinite; }
+      .cb-da { animation: cb-dP  8s ease-in-out        infinite; }
+      .cb-db { animation: cb-dP 10s ease-in-out  1.2s  infinite; }
+      .cb-dc { animation: cb-dP  7s ease-in-out  2.5s  infinite; }
+      .cb-dd { animation: cb-dP  9s ease-in-out  3.5s  infinite; }
+      .cb-ra { animation: cb-rP  8s ease-in-out        infinite; }
+      .cb-rb { animation: cb-rP 10s ease-in-out  1.2s  infinite; }
+      .cb-rc { animation: cb-rP  7s ease-in-out  2.5s  infinite; }
+      .cb-rd { animation: cb-rP  9s ease-in-out  3.5s  infinite; }
+      @keyframes cb-bA { 0%,100%{opacity:0.88} 50%{opacity:0.08} }
+      @keyframes cb-bB { 0%,100%{opacity:0.75} 50%{opacity:0.06} }
+      @keyframes cb-bC { 0%,100%{opacity:0.96} 50%{opacity:0.10} }
+      @keyframes cb-bD { 0%,100%{opacity:0.80} 50%{opacity:0.07} }
+      @keyframes cb-dP { 0%,100%{opacity:1.00} 50%{opacity:0.12} }
+      @keyframes cb-rP { 0%,100%{opacity:0.30;r:16px} 50%{opacity:0.03;r:8px} }
+    </style>
+  </defs>
+
+  <!--
+    Triangle network — 3 nested triangles (outer, middle, inner).
+    Icon: 3 nodes in triangle + midpoint dots on edges.
+    Vertices: top (300,60), bottom-left (95,420), bottom-right (505,420).
+  -->
+
+  <!-- === OUTER TRIANGLE === -->
+  <!-- top → bottom-left -->
+  <line class="cb-la" x1="300" y1="60"  x2="95"  y2="420" stroke="#4ade80"  stroke-width="1.3" stroke-linecap="round"/>
+  <!-- top → bottom-right -->
+  <line class="cb-lb" x1="300" y1="60"  x2="505" y2="420" stroke="#22c55e"  stroke-width="2.0" stroke-linecap="round"/>
+  <!-- bottom edge -->
+  <line class="cb-lc" x1="95"  y1="420" x2="505" y2="420" stroke="#16a34a"  stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- === MIDDLE TRIANGLE === -->
+  <!-- top → bottom-left -->
+  <line class="cb-ld" x1="300" y1="145" x2="160" y2="395" stroke="#86efac"  stroke-width="0.9" stroke-linecap="round"/>
+  <!-- top → bottom-right -->
+  <line class="cb-le" x1="300" y1="145" x2="440" y2="395" stroke="#4ade80"  stroke-width="1.4" stroke-linecap="round"/>
+  <!-- bottom edge -->
+  <line class="cb-lf" x1="160" y1="395" x2="440" y2="395" stroke="#22c55e"  stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- === INNER TRIANGLE === -->
+  <!-- top → bottom-left -->
+  <line class="cb-lg" x1="300" y1="220" x2="230" y2="370" stroke="#22c55e"  stroke-width="2.2" stroke-linecap="round"/>
+  <!-- top → bottom-right -->
+  <line class="cb-lh" x1="300" y1="220" x2="370" y2="370" stroke="#16a34a"  stroke-width="2.0" stroke-linecap="round"/>
+  <!-- bottom edge -->
+  <line class="cb-li" x1="230" y1="370" x2="370" y2="370" stroke="#4ade80"  stroke-width="1.3" stroke-linecap="round"/>
+
+  <!-- === NODES — 4 main (triangle vertices + center) === -->
+  <!-- Top vertex (outer) -->
+  <circle class="cb-ra" cx="300" cy="60"  r="16" fill="#22c55e"/>
+  <circle class="cb-da" cx="300" cy="60"  r="5.5" fill="#22c55e"/>
+  <!-- Bottom-left vertex -->
+  <circle class="cb-rb" cx="95"  cy="420" r="14" fill="#4ade80"/>
+  <circle class="cb-db" cx="95"  cy="420" r="4.5" fill="#4ade80"/>
+  <!-- Bottom-right vertex -->
+  <circle class="cb-rc" cx="505" cy="420" r="13" fill="#16a34a"/>
+  <circle class="cb-dc" cx="505" cy="420" r="4"  fill="#16a34a"/>
+  <!-- Inner center triangle — top vertex as 4th node -->
+  <circle class="cb-rd" cx="300" cy="220" r="11" fill="#22c55e"/>
+  <circle class="cb-dd" cx="300" cy="220" r="3.5" fill="#22c55e"/>
+
+  <!-- Midpoint dots on outer edges (like the icon) -->
+  <circle class="cb-da" cx="197" cy="240" r="5" fill="#4ade80"/>
+  <circle class="cb-db" cx="402" cy="240" r="5" fill="#22c55e"/>
+  <circle class="cb-dc" cx="300" cy="420" r="5" fill="#86efac"/>
+
+  <!-- Edge fades -->
+  <rect x="0" y="0" width="600" height="500" fill="url(#cb-fl)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#cb-fr)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#cb-ft)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#cb-fb)"/>
+</svg>

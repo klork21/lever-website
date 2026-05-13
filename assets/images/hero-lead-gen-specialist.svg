@@ -1,0 +1,73 @@
+<svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" width="600" height="500">
+  <defs>
+    <linearGradient id="lg-fl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="32%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lg-fr" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="0.7"/>
+      <stop offset="20%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lg-ft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lg-fb" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="16%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .lg-la { animation: lg-bA 11s ease-in-out        infinite; }
+      .lg-lb { animation: lg-bB 13s ease-in-out  1.4s  infinite; }
+      .lg-lc { animation: lg-bC  9s ease-in-out  2.8s  infinite; }
+      .lg-ld { animation: lg-bB 14s ease-in-out  0.7s  infinite; }
+      .lg-le { animation: lg-bA 10s ease-in-out  2.1s  infinite; }
+      .lg-lf { animation: lg-bD 12s ease-in-out  3.5s  infinite; }
+      .lg-lg { animation: lg-bB 15s ease-in-out  1.0s  infinite; }
+      .lg-lh { animation: lg-bA 12s ease-in-out  4.8s  infinite; }
+      .lg-li { animation: lg-bC 10s ease-in-out  5.5s  infinite; }
+      .lg-da { animation: lg-dP  8s ease-in-out        infinite; }
+      .lg-db { animation: lg-dP 10s ease-in-out  1.2s  infinite; }
+      .lg-dc { animation: lg-dP  7s ease-in-out  2.5s  infinite; }
+      .lg-ra { animation: lg-rP  8s ease-in-out        infinite; }
+      .lg-rb { animation: lg-rP 10s ease-in-out  1.2s  infinite; }
+      .lg-rc { animation: lg-rP  7s ease-in-out  2.5s  infinite; }
+      @keyframes lg-bA { 0%,100%{opacity:0.88} 50%{opacity:0.08} }
+      @keyframes lg-bB { 0%,100%{opacity:0.75} 50%{opacity:0.06} }
+      @keyframes lg-bC { 0%,100%{opacity:0.96} 50%{opacity:0.10} }
+      @keyframes lg-bD { 0%,100%{opacity:0.80} 50%{opacity:0.07} }
+      @keyframes lg-dP { 0%,100%{opacity:1.00} 50%{opacity:0.12} }
+      @keyframes lg-rP { 0%,100%{opacity:0.30;r:16px} 50%{opacity:0.03;r:8px} }
+    </style>
+  </defs>
+
+  <!-- Crosshair lines through center (400,250) — like the cross of a target -->
+  <line class="lg-lh" x1="-10"  y1="250" x2="610" y2="250" stroke="#86efac" stroke-width="0.8" stroke-linecap="round"/>
+  <line class="lg-li" x1="400"  y1="-10" x2="400" y2="510" stroke="#86efac" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- Diagonal crosshair -->
+  <line class="lg-lf" x1="190"  y1="460" x2="610" y2="40"  stroke="rgba(34,197,94,0.45)" stroke-width="0.7" stroke-linecap="round"/>
+  <line class="lg-lg" x1="140"  y1="-10" x2="610" y2="460" stroke="rgba(74,222,128,0.35)" stroke-width="0.7" stroke-linecap="round"/>
+
+  <!-- Concentric rings — 5 rings radiating from center (400,250) -->
+  <circle class="lg-la" cx="400" cy="250" r="55"  stroke="#22c55e"  stroke-width="2.0" fill="none" stroke-linecap="round"/>
+  <circle class="lg-lb" cx="400" cy="250" r="120" stroke="#4ade80"  stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <circle class="lg-lc" cx="400" cy="250" r="195" stroke="#16a34a"  stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <circle class="lg-ld" cx="400" cy="250" r="275" stroke="#86efac"  stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  <circle class="lg-le" cx="400" cy="250" r="365" stroke="#4ade80"  stroke-width="1.3" fill="none" stroke-linecap="round"/>
+
+  <!-- Center node -->
+  <circle class="lg-ra" cx="400" cy="250" r="16" fill="#22c55e"/>
+  <circle class="lg-da" cx="400" cy="250" r="5"  fill="#22c55e"/>
+  <!-- Node on ring 2 (top) -->
+  <circle class="lg-rb" cx="400" cy="130" r="13" fill="#4ade80"/>
+  <circle class="lg-db" cx="400" cy="130" r="4"  fill="#4ade80"/>
+  <!-- Node on ring 3 (lower-left, 135°) -->
+  <circle class="lg-rc" cx="262" cy="388" r="11" fill="#22c55e"/>
+  <circle class="lg-dc" cx="262" cy="388" r="3.5" fill="#22c55e"/>
+
+  <!-- Edge fades -->
+  <rect x="0" y="0" width="600" height="500" fill="url(#lg-fl)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#lg-fr)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#lg-ft)"/>
+  <rect x="0" y="0" width="600" height="500" fill="url(#lg-fb)"/>
+</svg>
