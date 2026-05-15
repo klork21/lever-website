@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Projekt — Ihre Anforderung. Unsere Lösung. · Lever</title>
-  <meta name="description" content="Kein Standard-Agent passt zu Ihrem Use Case? Lever entwickelt maßgeschneiderte KI-Lösungen — exakt auf Ihre Prozesse, Daten und Systeme zugeschnitten." />
+  <title>Custom Projekt — Ihre Lösung. Kein Kompromiss. · Lever</title>
+  <meta name="description" content="Maßgeschneiderte KI-Agenten ohne Kompromisse. Lever entwickelt Ihre individuelle KI-Lösung — exakt auf Ihre Prozesse, Systeme und Anforderungen zugeschnitten." />
+  <meta name="keywords" content="Custom KI-Agent, maßgeschneiderte KI-Lösung, individuelle Entwicklung, KI-Projekt, Stuttgart">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="LEVER GbR">
+  <meta name="language" content="de">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LEVER">
+  <meta property="og:title" content="Custom Projekt – Maßgeschneiderte KI-Lösung | LEVER">
+  <meta property="og:description" content="Individuelle KI-Agenten nach Ihren Anforderungen. Keine Kompromisse, keine Templates. Entwickelt in Stuttgart.">
+  <meta property="og:url" content="https://leverai.de/custom-projekt.html">
+  <meta property="og:image" content="https://leverai.de/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom Projekt – Maßgeschneiderte KI-Lösung | LEVER">
+  <meta name="twitter:description" content="Individuelle KI-Agenten ohne Kompromisse. Entwickelt für Ihre Prozesse und Systeme.">
+  <meta name="twitter:image" content="https://leverai.de/assets/images/og-image.jpg">
+  <link rel="canonical" href="https://leverai.de/custom-projekt.html" />
+  <meta name="theme-color" content="#166534">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.ico">
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/footer.css" />
@@ -15,306 +38,667 @@
   <div id="nav-placeholder"></div>
 
   <style>
-    /* ── Scope: custom-projekt.html ── */
+    /* ── Custom Projekt — scoped styles ── */
 
-    .page-custom .problem-list {
+    /* SECTION 1: Hero */
+    .cp-hero {
+      background: #000;
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 700px;
+      align-items: center;
     }
 
-    .page-custom .problem-item {
+    .cp-hero__inner {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 120px 0 80px;
+    }
+
+    .cp-hero__badge {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 2rem;
+    }
+
+    .cp-hero__title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .cp-hero__sub {
+      font-size: 1.0625rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+      max-width: 460px;
+      margin-bottom: 2.5rem;
+    }
+
+    .cp-hero__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .cp-btn--primary {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #000;
+      text-decoration: none;
+      transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+    }
+
+    .cp-btn--primary:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+    }
+
+    .cp-btn--outline {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      text-decoration: none;
+      transition: border-color 0.18s, color 0.18s;
+    }
+
+    .cp-btn--outline:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+    }
+
+    .cp-hero__divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin-bottom: 2.5rem;
+    }
+
+    .cp-hero__stats {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .cp-stat__val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #22c55e;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .cp-stat__label {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.38);
+      line-height: 1.5;
+    }
+
+    .cp-hero__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cp-hero__visual-inner {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cp-hero__visual-text {
+      font-size: clamp(5rem, 12vw, 8rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      letter-spacing: -0.05em;
+      text-align: center;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .cp-hero__visual-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.28);
+      border-radius: 100px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #22c55e;
+      white-space: nowrap;
+    }
+
+    /* SECTION 2: Statement */
+    .cp-statement {
+      background: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cp-statement__inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cp-statement__text {
+      font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+      color: #666;
+      line-height: 1.85;
+      margin-bottom: 1.75rem;
+    }
+
+    .cp-statement__bold {
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      font-weight: 800;
+      color: #000;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    /* SECTION 3: 3 Säulen */
+    .cp-pillars {
+      background: #0a0a0a;
+      padding: 80px 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .cp-pillars__label {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(34, 197, 94, 0.75);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .cp-pillars__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cp-pillar {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cp-pillar__num {
+      font-size: 6rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      letter-spacing: -0.05em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      user-select: none;
+    }
+
+    .cp-pillar__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.875rem;
+    }
+
+    .cp-pillar__text {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.43);
+      line-height: 1.8;
+    }
+
+    /* SECTION 4: Workflow */
+    .cp-workflow {
+      background: #fff;
+      padding: 80px 0;
+    }
+
+    .cp-section-label {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #22c55e;
+      margin-bottom: 0.75rem;
+    }
+
+    .cp-section-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #000;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .cp-section-intro {
+      font-size: 1.0625rem;
+      color: #666;
+      line-height: 1.75;
+      max-width: 660px;
+      margin-bottom: 3rem;
+    }
+
+    .cp-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .cp-step {
+      background: #f7f7f7;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .cp-step__num {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #22c55e;
+    }
+
+    .cp-step__title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .cp-step__sub {
+      font-size: 0.85rem;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* SECTION 5: Features */
+    .cp-features {
+      background: #fafafa;
+      padding: 80px 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .cp-feat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.875rem;
+      max-width: 780px;
+    }
+
+    .cp-feat-item {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
-      padding: 1.25rem 1.5rem;
+      gap: 0.875rem;
+      padding: 1.125rem 1.375rem;
       background: #fff;
       border: 1px solid #e5e5e5;
       border-radius: 12px;
       font-size: 0.9375rem;
       color: #444;
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
-    .page-custom .problem-item__dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #f87171;
-      margin-top: 0.45rem;
+    .cp-feat-check {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #22c55e;
       flex-shrink: 0;
+      margin-top: 0.08rem;
     }
 
-    .page-custom .solution__intro {
-      font-size: 1.0625rem;
-      color: #555;
-      line-height: 1.75;
-      max-width: 680px;
-      margin-bottom: 2.5rem;
+    /* SECTION 6: KPIs */
+    .cp-kpis {
+      background: #000;
+      padding: 80px 0;
     }
 
-    .page-custom .kpi-boxes {
+    .cp-kpis__label {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 3rem;
+    }
+
+    .cp-kpis__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
-      max-width: 780px;
     }
 
-    .page-custom .kpi-box {
-      background: #000;
+    .cp-kpi {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 2.25rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
-      gap: 0.625rem;
     }
 
-    .page-custom .kpi-box__val {
+    .cp-kpi__val {
       font-size: 2.5rem;
       font-weight: 800;
       color: #22c55e;
       letter-spacing: -0.035em;
       line-height: 1;
+      margin-bottom: 0.625rem;
     }
 
-    .page-custom .kpi-box__label {
+    .cp-kpi__label {
       font-size: 0.875rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.43);
+      line-height: 1.5;
     }
 
-    .page-custom .custom-cta {
+    /* SECTION 7: CTA */
+    .cp-cta {
       background: #fff;
-      border-top: 1px solid #e5e5e5;
-      padding: 5rem 0;
-    }
-
-    .page-custom .custom-cta__inner {
-      max-width: 520px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 80px 0;
       text-align: center;
-      gap: 1.25rem;
+      border-top: 1px solid #e5e5e5;
     }
 
-    .page-custom .custom-cta__title {
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
+    .cp-cta__title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
       font-weight: 800;
       letter-spacing: -0.025em;
-      color: #111;
+      color: #000;
       line-height: 1.2;
+      margin-bottom: 1rem;
     }
 
-    .page-custom .custom-cta__text {
+    .cp-cta__text {
       font-size: 1rem;
       color: #6b7280;
-      line-height: 1.7;
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
     }
 
-    .page-custom .btn--dark {
+    .cp-cta__btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 0.875rem 1.75rem;
+      padding: 1rem 2rem;
       font-size: 1rem;
       font-weight: 600;
       border-radius: 10px;
-      background: #111;
+      background: #000;
       color: #fff;
-      border: none;
-      cursor: pointer;
       text-decoration: none;
-      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
     }
 
-    .page-custom .btn--dark:hover {
+    .cp-cta__btn:hover {
       background: #22c55e;
+      color: #000;
       transform: translateY(-1px);
       box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
     }
 
+    /* Responsive */
+    @media (max-width: 960px) {
+      .cp-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .cp-hero__visual { display: none; }
+      .cp-pillars__grid { grid-template-columns: 1fr; }
+      .cp-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 640px) {
-      .page-custom .kpi-boxes { grid-template-columns: 1fr; }
+      .cp-hero__stats { gap: 2rem; }
+      .cp-steps { grid-template-columns: 1fr; }
+      .cp-feat-grid { grid-template-columns: 1fr; }
+      .cp-kpis__grid { grid-template-columns: 1fr; }
     }
   </style>
 
-  <main class="page-agent page-custom">
+  <main>
 
-    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
-    <section class="agent-hero">
+    <!-- ═══════════════════════════ SECTION 1: HERO ══════════════════════════ -->
+    <section class="cp-hero">
       <div class="container">
-        <a href="index.html" class="agent-back">← Zur Startseite</a>
-<h1 class="agent-hero__title">Ihre Anforderung.<br>Unsere Lösung.</h1>
-        <p class="agent-hero__sub">
-          Nicht jeder Prozess passt in eine Schublade. Wenn keiner unserer Standard-Agenten
-          Ihren Use Case trifft, entwickeln wir eine Lösung von Grund auf — exakt auf Ihre
-          Systeme, Ihre Daten und Ihre internen Abläufe zugeschnitten. Kein Kompromiss,
-          keine Umwege.
-        </p>
-      </div>
-    </section>
+        <div class="cp-hero__inner">
 
-    <!-- ══════════════════════════ PROBLEM ═══════════════════════════════════ -->
-    <section class="agent-section">
-      <div class="container">
-        <div class="agent-section__header">
-          <span class="section__label">Wann ein Custom Projekt sinnvoll ist</span>
-        </div>
-        <p class="solution__intro">
-          Vorgefertigte KI-Produkte lösen Standardprobleme — aber Ihr Unternehmen hat
-          gewachsene Strukturen, individuelle Systemlandschaften und spezifische Anforderungen,
-          die kein Off-the-shelf-Tool kennt. Genau hier fangen wir an.
-        </p>
-        <div class="problem-list">
-          <div class="problem-item">
-            <span class="problem-item__dot"></span>
-            Ihr Use Case ist zu spezifisch für Standard-Produkte
+          <div class="cp-hero__content">
+            <span class="cp-hero__badge">⚙️ Custom Projekt</span>
+            <h1 class="cp-hero__title">
+              Ihre Lösung.<br>Kein Kompromiss.
+            </h1>
+            <p class="cp-hero__sub">
+              Wenn kein Standard-Agent zu Ihrem Use Case passt, entwickeln wir ihn von Grund auf — genau für Ihre Systeme, Ihre Daten und Ihre Prozesse.
+            </p>
+            <div class="cp-hero__actions">
+              <a href="kontakt.html" class="cp-btn--primary">Projekt anfragen →</a>
+              <a href="prozess.html" class="cp-btn--outline">Wie wir arbeiten</a>
+            </div>
+            <div class="cp-hero__divider"></div>
+            <div class="cp-hero__stats">
+              <div>
+                <div class="cp-stat__val">6–12W</div>
+                <div class="cp-stat__label">von Analyse<br>bis Launch</div>
+              </div>
+              <div>
+                <div class="cp-stat__val">100%</div>
+                <div class="cp-stat__label">individuell —<br>kein Baukasten</div>
+              </div>
+              <div>
+                <div class="cp-stat__val">&lt;24h</div>
+                <div class="cp-stat__label">Support-Reaktionszeit<br>nach Go-live</div>
+              </div>
+            </div>
           </div>
-          <div class="problem-item">
-            <span class="problem-item__dot"></span>
-            Interne Prozesse umfassen mehrere Systeme, die verbunden werden müssen
-          </div>
-          <div class="problem-item">
-            <span class="problem-item__dot"></span>
-            Compliance- oder Sicherheitsanforderungen schließen Cloud-Standardlösungen aus
-          </div>
-          <div class="problem-item">
-            <span class="problem-item__dot"></span>
-            Sie brauchen einen Agenten, der auf Ihren eigenen Daten und Ihrem eigenen Wissen aufbaut
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ══════════════════════════ ANSATZ ════════════════════════════════════ -->
-    <section class="agent-section agent-section--alt">
-      <div class="container">
-        <div class="agent-section__header">
-          <span class="section__label">Wie wir arbeiten</span>
-        </div>
-        <p class="solution__intro">
-          Wir beginnen nicht mit Technologie, sondern mit Verständnis. In einem strukturierten
-          Workshop analysieren wir Ihre Prozesse, identifizieren die kritischen Hebel und
-          definieren gemeinsam, was der Agent leisten soll — und was nicht. Erst dann bauen wir.
-          Das Ergebnis ist ein System, das sich in Ihre bestehende Infrastruktur einfügt, ohne
-          dass Sie etwas ersetzen oder migrieren müssen.
-        </p>
-        <div class="workflow" role="list">
-          <div class="workflow__step" role="listitem">
-            <div class="workflow__num">01</div>
-            <span class="workflow__label">Deep-Dive Workshop</span>
-            <span class="workflow__sub">Prozesse, Daten &amp; Systemlandschaft analysieren</span>
+          <div class="cp-hero__visual">
+            <div class="cp-hero__visual-inner">
+              <div class="cp-hero__visual-text">KI</div>
+              <span class="cp-hero__visual-badge">Made for you</span>
+            </div>
           </div>
-          <span class="workflow__arrow" aria-hidden="true">→</span>
-          <div class="workflow__step" role="listitem">
-            <div class="workflow__num">02</div>
-            <span class="workflow__label">Konzeption &amp; Prototyp</span>
-            <span class="workflow__sub">Architektur planen, ersten Entwurf validieren</span>
-          </div>
-          <span class="workflow__arrow" aria-hidden="true">→</span>
-          <div class="workflow__step" role="listitem">
-            <div class="workflow__num">03</div>
-            <span class="workflow__label">Entwicklung &amp; Integration</span>
-            <span class="workflow__sub">Agent bauen und nahtlos einbinden</span>
-          </div>
-          <span class="workflow__arrow" aria-hidden="true">→</span>
-          <div class="workflow__step" role="listitem">
-            <div class="workflow__num">04</div>
-            <span class="workflow__label">Launch &amp; Optimierung</span>
-            <span class="workflow__sub">Live schalten und kontinuierlich verbessern</span>
-          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════ FEATURES ══════════════════════════════════ -->
-    <section class="agent-section">
+    <!-- ═══════════════════════════ SECTION 2: STATEMENT ════════════════════ -->
+    <section class="cp-statement">
       <div class="container">
-        <div class="agent-section__header">
-          <span class="section__label">Was Sie bekommen</span>
-        </div>
-        <p class="solution__intro">
-          Jede Custom-Lösung, die wir entwickeln, ist vollständig dokumentiert, getestet und
-          so übergeben, dass Ihr Team sie eigenständig bedienen kann. Wir bleiben als Partner
-          im Hintergrund — für Weiterentwicklungen, Anpassungen und Support.
-        </p>
-        <ul class="features__grid">
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Vollständig auf Ihre Prozesse und Systeme zugeschnitten
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Integration in bestehende Tools, APIs &amp; Datenbanken
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Training auf Ihren eigenen Daten &amp; Ihrem Unternehmenswissen
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            DSGVO-konform — wahlweise Cloud oder On-Premise
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Skalierbare Architektur für zukünftige Anforderungen
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Vollständige Dokumentation &amp; Team-Schulung
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Laufende Betreuung &amp; Weiterentwicklung
-          </li>
-          <li class="features__item">
-            <span class="features__check">✓</span>
-            Support mit Reaktionszeit unter 24 Stunden
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ KPIs ══════════════════════════════════════ -->
-    <section class="agent-section agent-section--alt">
-      <div class="container">
-        <div class="agent-section__header">
-          <span class="section__label">In Zahlen</span>
-        </div>
-        <div class="kpi-boxes">
-          <div class="kpi-box">
-            <div class="kpi-box__val">100%</div>
-            <div class="kpi-box__label">individuell — kein Baukasten, kein Kompromiss</div>
-          </div>
-          <div class="kpi-box">
-            <div class="kpi-box__val">6–12W</div>
-            <div class="kpi-box__label">von der ersten Analyse bis zum Launch</div>
-          </div>
-          <div class="kpi-box">
-            <div class="kpi-box__val">&lt;24h</div>
-            <div class="kpi-box__label">Support-Reaktionszeit nach Go-live</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ CTA ════════════════════════════════════════ -->
-    <section class="custom-cta">
-      <div class="container">
-        <div class="custom-cta__inner">
-          <h2 class="custom-cta__title">Projekt anfragen</h2>
-          <p class="custom-cta__text">
-            Beschreiben Sie uns kurz Ihren Use Case — wir melden uns innerhalb von 24 Stunden
-            mit einer ersten Einschätzung und konkreten nächsten Schritten.
+        <div class="cp-statement__inner">
+          <p class="cp-statement__text">
+            Vorgefertigte KI-Produkte lösen Standardprobleme. Ihr Unternehmen hat gewachsene Strukturen, individuelle Systemlandschaften und spezifische Anforderungen, die kein Off-the-shelf-Tool kennt.
           </p>
-          <a href="kontakt.html" class="btn--dark">Jetzt anfragen →</a>
+          <p class="cp-statement__bold">Genau dafür sind wir da.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SECTION 3: 3 SÄULEN ═════════════════════ -->
+    <section class="cp-pillars">
+      <div class="container">
+        <span class="cp-pillars__label">Unsere Prinzipien</span>
+        <div class="cp-pillars__grid">
+
+          <div class="cp-pillar">
+            <div class="cp-pillar__num">01</div>
+            <h3 class="cp-pillar__title">Keine Templates</h3>
+            <p class="cp-pillar__text">
+              Wir beginnen bei Ihrem Prozess — nicht bei einer vorgefertigten Lösung. Jede Anforderung ist einzigartig, jeder Agent entsteht von Grund auf.
+            </p>
+          </div>
+
+          <div class="cp-pillar">
+            <div class="cp-pillar__num">02</div>
+            <h3 class="cp-pillar__title">Kein Systemwechsel</h3>
+            <p class="cp-pillar__text">
+              Der Agent integriert sich in Ihre bestehende Infrastruktur. Keine Datenmigration, keine neue Software, kein Mehraufwand für Ihr Team.
+            </p>
+          </div>
+
+          <div class="cp-pillar">
+            <div class="cp-pillar__num">03</div>
+            <h3 class="cp-pillar__title">Kein Blindflug</h3>
+            <p class="cp-pillar__text">
+              Transparente Projektführung mit klaren Milestones. Sie wissen jederzeit wo wir stehen und was als nächstes kommt.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SECTION 4: WORKFLOW ═════════════════════ -->
+    <section class="cp-workflow">
+      <div class="container">
+        <span class="cp-section-label">Wie wir arbeiten</span>
+        <h2 class="cp-section-title">Von der ersten Analyse<br>bis zum laufenden Agenten.</h2>
+        <p class="cp-section-intro">
+          Wir beginnen nicht mit Technologie, sondern mit Verständnis. In einem strukturierten Workshop analysieren wir Ihre Prozesse, identifizieren die kritischen Hebel und definieren gemeinsam, was der Agent leisten soll — und was nicht.
+        </p>
+        <div class="cp-steps">
+          <div class="cp-step">
+            <span class="cp-step__num">01</span>
+            <span class="cp-step__title">Deep-Dive Workshop</span>
+            <span class="cp-step__sub">Prozesse, Daten und Systemlandschaft analysieren</span>
+          </div>
+          <div class="cp-step">
+            <span class="cp-step__num">02</span>
+            <span class="cp-step__title">Konzeption &amp; Prototyp</span>
+            <span class="cp-step__sub">Architektur planen, ersten Entwurf validieren</span>
+          </div>
+          <div class="cp-step">
+            <span class="cp-step__num">03</span>
+            <span class="cp-step__title">Entwicklung &amp; Integration</span>
+            <span class="cp-step__sub">Agent bauen und nahtlos in Ihre Tools einbinden</span>
+          </div>
+          <div class="cp-step">
+            <span class="cp-step__num">04</span>
+            <span class="cp-step__title">Launch &amp; Optimierung</span>
+            <span class="cp-step__sub">Live schalten und kontinuierlich verbessern</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SECTION 5: FEATURES ═════════════════════ -->
+    <section class="cp-features">
+      <div class="container">
+        <span class="cp-section-label">Was Sie bekommen</span>
+        <h2 class="cp-section-title">Vollständig. Dokumentiert. Einsatzbereit.</h2>
+        <p class="cp-section-intro">
+          Jede Custom-Lösung wird vollständig dokumentiert, getestet und so übergeben, dass Ihr Team sie eigenständig bedienen kann. Wir bleiben als Partner im Hintergrund.
+        </p>
+        <div class="cp-feat-grid">
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Vollständig auf Ihre Prozesse und Systeme zugeschnitten
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Integration in bestehende Tools, APIs &amp; Datenbanken
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Training auf Ihren eigenen Daten &amp; Ihrem Unternehmenswissen
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            DSGVO-konform — wahlweise Cloud oder On-Premise
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Skalierbare Architektur für zukünftige Anforderungen
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Vollständige Dokumentation &amp; Team-Schulung
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Laufende Betreuung &amp; Weiterentwicklung
+          </div>
+          <div class="cp-feat-item">
+            <span class="cp-feat-check">✓</span>
+            Support mit Reaktionszeit unter 24 Stunden
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SECTION 6: KPIs ══════════════════════════ -->
+    <section class="cp-kpis">
+      <div class="container">
+        <span class="cp-kpis__label">In Zahlen</span>
+        <div class="cp-kpis__grid">
+          <div class="cp-kpi">
+            <div class="cp-kpi__val">6–12W</div>
+            <div class="cp-kpi__label">von der ersten Analyse bis zum Launch</div>
+          </div>
+          <div class="cp-kpi">
+            <div class="cp-kpi__val">100%</div>
+            <div class="cp-kpi__label">individuell — kein Baukasten, kein Kompromiss</div>
+          </div>
+          <div class="cp-kpi">
+            <div class="cp-kpi__val">&lt;24h</div>
+            <div class="cp-kpi__label">Support-Reaktionszeit nach Go-live</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SECTION 7: CTA ═══════════════════════════ -->
+    <section class="cp-cta">
+      <div class="container">
+        <h2 class="cp-cta__title">Projekt anfragen</h2>
+        <p class="cp-cta__text">
+          Beschreiben Sie uns kurz Ihren Use Case — wir melden uns innerhalb von 24 Stunden mit einer ersten Einschätzung und konkreten nächsten Schritten.
+        </p>
+        <a href="kontakt.html" class="cp-cta__btn">Jetzt anfragen →</a>
       </div>
     </section>
 

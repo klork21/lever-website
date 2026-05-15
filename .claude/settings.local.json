@@ -4,7 +4,8 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\pierr\\\\ki-prototyp\\\\lead_frontend\\\\lever-website\\\\lead-agent.html\" -ErrorAction SilentlyContinue)",
       "Bash(Remove-Item \"C:\\\\Users\\\\pierr\\\\ki-prototyp\\\\lead_frontend\\\\lever-website\\\\onboarding-agent.html\" -ErrorAction SilentlyContinue)",
       "Bash(Remove-Item \"C:\\\\Users\\\\pierr\\\\ki-prototyp\\\\lead_frontend\\\\lever-website\\\\wissens-agent.html\" -ErrorAction SilentlyContinue)",
-      "Bash(Write-Host \"Deleted\")"
+      "Bash(Write-Host \"Deleted\")",
+      "Bash(Get-Content *)"
     ]
   }
 }

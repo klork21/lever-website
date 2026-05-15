@@ -470,6 +470,199 @@
   margin-top: -8px;
 }
 
+/* ══════════════════════════════════════════════════════════
+   SECTION A — WHY IT MATTERS
+══════════════════════════════════════════════════════════ */
+.av2-why {
+  background: #ffffff;
+  padding: 60px 0 0;
+}
+
+.av2-why__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.av2-why__label {
+  display: block;
+  font-size: 11px;
+  color: var(--gruen-primary);
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.av2-why__text {
+  font-size: 20px;
+  color: #374151;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION B — FEATURE SPOTLIGHT
+══════════════════════════════════════════════════════════ */
+.av2-spotlight {
+  background: #ffffff;
+  padding: 60px 0;
+}
+
+.av2-spotlight__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.av2-spotlight__label {
+  display: block;
+  font-size: 11px;
+  color: var(--gruen-primary);
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.av2-spotlight__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+.av2-spotlight__row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 36px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.av2-spotlight__row:last-child { border-bottom: none; }
+
+.av2-spotlight__left {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.av2-spotlight__icon-box {
+  width: 52px;
+  height: 52px;
+  background: var(--gruen-tint);
+  border: 1px solid var(--gruen-subtle);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.av2-spotlight__icon-box svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--gruen-primary);
+}
+
+.av2-spotlight__row-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+}
+
+.av2-spotlight__right { flex: 0 0 60%; }
+
+.av2-spotlight__desc {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.av2-spotlight__highlight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--gruen-primary);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION C — INTEGRATIONS
+══════════════════════════════════════════════════════════ */
+.av2-integrations {
+  background: #111111;
+  padding: 60px 0;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  text-align: center;
+}
+
+.av2-integrations__label {
+  display: block;
+  font-size: 11px;
+  color: rgba(34, 197, 94, 0.85);
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.av2-integrations__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.av2-int-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1c1c1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 10px 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.av2-int-item:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1);
+}
+
+.av2-int-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.av2-int-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.av2-int-item--text {
+  background: #161618;
+}
+
+.av2-integrations__note {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 24px;
+}
+
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 1024px) {
   .av2-hero__title { font-size: 44px; }
@@ -510,4 +703,15 @@
 
   .av2-cta { padding: 60px 0; }
   .av2-cta__title { font-size: 30px; }
+
+  .av2-spotlight__row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .av2-spotlight__left,
+  .av2-spotlight__right { flex: none; width: 100%; }
+  .av2-why__text { font-size: 17px; }
+  .av2-spotlight__title { font-size: 30px; }
+  .av2-why__inner { padding: 0 20px; }
 }
