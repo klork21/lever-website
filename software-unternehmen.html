@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Für Software-Unternehmen — KI-Addon für euer Produkt · LEVER</title>
+  <meta name="description" content="Lever baut KI-Agenten als natives Addon für Software-Unternehmen – DSGVO-konform auf Azure EU, Schwarz Digits oder On-Premise. Whitelabel oder Integration." />
+  <meta name="keywords" content="KI-Addon, Software-Unternehmen, Whitelabel, DSGVO, Azure EU, On-Premise, KI-Integration">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="LEVER GbR">
+  <meta name="language" content="de">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LEVER">
+  <meta property="og:title" content="Für Software-Unternehmen – KI-Addon · LEVER">
+  <meta property="og:description" content="Lever baut KI-Agenten als natives Addon für Software-Unternehmen – DSGVO-konform auf Azure EU, Schwarz Digits oder On-Premise.">
+  <meta property="og:url" content="https://leverai.de/software-unternehmen">
+  <meta property="og:image" content="https://leverai.de/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Für Software-Unternehmen – KI-Addon · LEVER">
+  <meta name="twitter:description" content="KI-Agenten als natives Addon für euer Produkt – DSGVO-konform, 3 Hosting-Optionen, dauerhaft betreut.">
+  <meta name="twitter:image" content="https://leverai.de/assets/images/og-image.jpg">
+  <link rel="canonical" href="https://leverai.de/software-unternehmen" />
+  <meta name="theme-color" content="#166534">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/agents.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       Scope: software-unternehmen.html  (.page-sw)
+    ══════════════════════════════════════════════════════════ */
+
+    /* ── HERO (dark) ── */
+    .page-sw .sw-hero {
+      background: #000000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 40px 80px;
+    }
+
+    .page-sw .sw-hero__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .page-sw .sw-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 9999px;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      background: rgba(22, 101, 52, 0.15);
+      color: var(--gruen-light);
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .page-sw .sw-hero__headline {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .page-sw .sw-hero__sub {
+      font-size: 1.0625rem;
+      color: #6b7280;
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+
+    .page-sw .sw-hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gruen-dunkel);
+      color: #ffffff;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .page-sw .sw-hero__cta:hover { background: #0f3320; }
+
+    .page-sw .sw-hero__stats {
+      display: flex;
+      gap: 40px;
+      padding-top: 32px;
+      margin-top: 32px;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .page-sw .sw-hero__stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gruen-light);
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .page-sw .sw-hero__stat-label {
+      display: block;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .page-sw .sw-hero__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-sw .sw-hero-svg {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+    }
+
+    /* ── Shared section helpers ── */
+    .page-sw .sw-section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-sw .sw-section-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gruen-primary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .page-sw .sw-section-label--light { color: var(--gruen-light); }
+
+    .page-sw .sw-section-headline {
+      font-size: clamp(1.875rem, 3vw, 2.625rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #000000;
+      margin-bottom: 48px;
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .page-sw .sw-section-headline--light { color: #ffffff; }
+
+    /* ── SECTION 1: ZWEI MODELLE (hell) ── */
+    .page-sw .sw-modelle {
+      background: #ffffff;
+      padding: 100px 40px;
+    }
+
+    .page-sw .sw-modelle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .page-sw .sw-modell-card {
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .page-sw .sw-modell-card--addon {
+      background: var(--gruen-tint);
+      border: 1px solid rgba(34, 197, 94, 0.45);
+      box-shadow: 0 2px 12px rgba(34, 197, 94, 0.08);
+    }
+
+    .page-sw .sw-modell-card--white {
+      background: #ffffff;
+      border: 1px solid #b8bfc8;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    }
+
+    .page-sw .sw-modell-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .page-sw .sw-modell-badge--addon {
+      background: var(--gruen-tint);
+      border: 1px solid var(--gruen-subtle);
+      color: var(--gruen-primary);
+    }
+
+    .page-sw .sw-modell-badge--white {
+      background: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      color: #444444;
+    }
+
+    .page-sw .sw-modell-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-sw .sw-modell-text {
+      font-size: 0.9375rem;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .page-sw .sw-modell-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .page-sw .sw-modell-feat {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: #374151;
+    }
+
+    .page-sw .sw-modell-feat-check {
+      color: var(--gruen-mid);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── SECTION 2: HOSTING (dunkel) ── */
+    .page-sw .sw-hosting {
+      background: #0a0a0a;
+      padding: 100px 40px;
+    }
+
+    .page-sw .sw-hosting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .page-sw .sw-hosting-card {
+      background: #181818;
+      border: 1px solid #323232;
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .page-sw .sw-hosting-card:hover { border-color: var(--gruen-mid); }
+
+    .page-sw .sw-hosting-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+
+    .page-sw .sw-hosting-badge--recommended {
+      background: rgba(22, 101, 52, 0.2);
+      border: 1px solid rgba(22, 101, 52, 0.4);
+      color: var(--gruen-light);
+    }
+
+    .page-sw .sw-hosting-badge--secondary {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid #333333;
+      color: #9ca3af;
+    }
+
+    .page-sw .sw-hosting-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--gruen-mid);
+      margin-bottom: 20px;
+    }
+
+    .page-sw .sw-hosting-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .page-sw .sw-hosting-text {
+      font-size: 0.875rem;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .page-sw .sw-hosting-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .page-sw .sw-hosting-detail {
+      font-size: 0.8125rem;
+      color: #9ca3af;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .page-sw .sw-hosting-detail::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #374151;
+    }
+
+    /* ── SECTION 3: EU AI ACT (hell) ── */
+    .page-sw .sw-compliance {
+      background: #fafafa;
+      padding: 100px 40px;
+    }
+
+    .page-sw .sw-compliance-grid {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .page-sw .sw-compliance-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gruen-primary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .page-sw .sw-compliance-headline {
+      font-size: clamp(1.75rem, 2.5vw, 2.375rem);
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .page-sw .sw-compliance-text {
+      font-size: 0.9375rem;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    .page-sw .sw-compliance-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-sw .sw-compliance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    .page-sw .sw-compliance-item:last-child { border-bottom: none; }
+
+    .page-sw .sw-compliance-num {
+      width: 28px;
+      height: 28px;
+      background: var(--gruen-dunkel);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .page-sw .sw-compliance-item-title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+
+    .page-sw .sw-compliance-item-text {
+      font-size: 0.8125rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    /* ── SECTION 4: REFERENZ (dunkel) ── */
+    .page-sw .sw-referenz {
+      background: #0a0a0a;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .page-sw .sw-referenz-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #181818;
+      border: 1px solid #323232;
+      border-top: 3px solid var(--gruen-mid);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: left;
+    }
+
+    .page-sw .sw-referenz-company {
+      font-size: 11px;
+      color: #6b7280;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .page-sw .sw-referenz-product {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-sw .sw-referenz-text {
+      font-size: 0.9375rem;
+      color: #6b7280;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .page-sw .sw-referenz-kpi {
+      display: inline-block;
+      background: rgba(22, 101, 52, 0.15);
+      border: 1px solid rgba(22, 101, 52, 0.3);
+      color: var(--gruen-light);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    /* ── SECTION 5: PREISMODELL (hell) ── */
+    .page-sw .sw-preise {
+      background: #ffffff;
+      padding: 100px 40px;
+    }
+
+    .page-sw .sw-preise-sub {
+      font-size: 1rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: -36px;
+      margin-bottom: 56px;
+      line-height: 1.6;
+    }
+
+    .page-sw .sw-preise-steps {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .page-sw .sw-preise-step {
+      padding: 0 40px;
+      border-right: 1px solid #cecece;
+    }
+
+    .page-sw .sw-preise-step:first-child { padding-left: 0; }
+    .page-sw .sw-preise-step:last-child  { border-right: none; }
+
+    .page-sw .sw-preise-num {
+      display: block;
+      font-size: 13px;
+      color: var(--gruen-primary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .page-sw .sw-preise-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .page-sw .sw-preise-text {
+      font-size: 0.875rem;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    .page-sw .sw-preise-badge {
+      display: inline-block;
+      background: #ededed;
+      border: 1px solid #c8c8c8;
+      color: #666666;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+
+    /* ── ABSCHLUSS CTA (schwarz) ── */
+    .page-sw .sw-final-cta {
+      background: #000000;
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .page-sw .sw-final-cta__pre {
+      font-size: 11px;
+      color: var(--gruen-light);
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-sw .sw-final-cta__headline {
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .page-sw .sw-final-cta__sub {
+      font-size: 1rem;
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    .page-sw .sw-final-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gruen-dunkel);
+      color: #ffffff;
+      padding: 18px 40px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .page-sw .sw-final-cta__btn:hover { background: #0f3320; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .page-sw .sw-hosting-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .page-sw .sw-hero {
+        padding: 100px 20px 60px;
+        min-height: auto;
+      }
+
+      .page-sw .sw-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .page-sw .sw-hero__headline { font-size: 2.5rem; }
+      .page-sw .sw-hero__visual { display: none; }
+
+      .page-sw .sw-hero__stats {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .page-sw .sw-modelle { padding: 60px 20px; }
+      .page-sw .sw-modelle-grid { grid-template-columns: 1fr; }
+      .page-sw .sw-modell-card { padding: 28px 24px; }
+
+      .page-sw .sw-hosting { padding: 60px 20px; }
+      .page-sw .sw-hosting-grid { grid-template-columns: 1fr; }
+      .page-sw .sw-hosting-card { padding: 28px 24px; }
+
+      .page-sw .sw-compliance { padding: 60px 20px; }
+      .page-sw .sw-compliance-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .page-sw .sw-referenz { padding: 60px 20px; }
+      .page-sw .sw-referenz-card { padding: 32px 24px; }
+
+      .page-sw .sw-preise { padding: 60px 20px; }
+      .page-sw .sw-preise-steps { grid-template-columns: 1fr; }
+      .page-sw .sw-preise-step {
+        padding: 24px 0;
+        border-right: none;
+        border-bottom: 1px solid #cecece;
+      }
+      .page-sw .sw-preise-step:first-child { padding-left: 0; }
+      .page-sw .sw-preise-step:last-child  { border-bottom: none; }
+      .page-sw .sw-preise-sub { margin-top: 0; }
+
+      .page-sw .sw-final-cta { padding: 80px 20px; }
+      .page-sw .sw-final-cta__headline { font-size: 2.25rem; }
+      .page-sw .sw-final-cta__btn { width: 100%; justify-content: center; }
+    }
+  </style>
+
+  <main class="page-agent page-sw">
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
+    <section class="sw-hero">
+      <div class="sw-hero__inner">
+
+        <!-- Linke Spalte -->
+        <div>
+          <div class="sw-hero__badge">Für Software-Unternehmen</div>
+          <h1 class="sw-hero__headline">
+            Der KI-Partner für<br>Software-Unternehmen.
+          </h1>
+          <p class="sw-hero__sub">
+            Ihr entwickelt Software – wir bauen die KI-Schicht dazu. Als integriertes Feature für eure Kunden, compliant gehostet, dauerhaft betreut.
+          </p>
+          <a href="kontakt.html" class="sw-hero__cta">Partnerschaft anfragen →</a>
+
+          <div class="sw-hero__stats">
+            <div>
+              <span class="sw-hero__stat-num">2</span>
+              <span class="sw-hero__stat-label">Modelle<br>Addon oder Whitelabel</span>
+            </div>
+            <div>
+              <span class="sw-hero__stat-num">3</span>
+              <span class="sw-hero__stat-label">Hosting<br>EU, DE oder On-Premise</span>
+            </div>
+            <div>
+              <span class="sw-hero__stat-num">24h</span>
+              <span class="sw-hero__stat-label">Support-<br>Reaktionszeit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rechte Spalte: SVG-Illustration -->
+        <div class="sw-hero__visual" aria-hidden="true">
+          <svg class="sw-hero-svg" viewBox="0 0 460 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="sw-dot-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.8" fill="#1e1e1e"/>
+              </pattern>
+              <radialGradient id="sw-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#22c55e" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- Dot grid -->
+            <rect width="460" height="460" fill="url(#sw-dot-grid)"/>
+            <!-- Glow -->
+            <circle cx="230" cy="230" r="150" fill="url(#sw-glow)"/>
+            <!-- Connecting lines -->
+            <line x1="148" y1="96"  x2="210" y2="210" stroke="#1e3a1e" stroke-width="1"/>
+            <line x1="312" y1="96"  x2="250" y2="210" stroke="#1e3a1e" stroke-width="1"/>
+            <line x1="104" y1="230" x2="200" y2="230" stroke="#1e3a1e" stroke-width="1"/>
+            <line x1="356" y1="230" x2="260" y2="230" stroke="#1e3a1e" stroke-width="1"/>
+            <line x1="148" y1="364" x2="210" y2="250" stroke="#1e3a1e" stroke-width="1"/>
+            <line x1="312" y1="364" x2="250" y2="250" stroke="#1e3a1e" stroke-width="1"/>
+            <!-- Module boxes -->
+            <rect x="44"  y="72"  width="104" height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="96"  y="101" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">ERP</text>
+            <rect x="312" y="72"  width="104" height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="364" y="101" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">CRM</text>
+            <rect x="24"  y="206" width="80"  height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="64"  y="235" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">API</text>
+            <rect x="356" y="206" width="80"  height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="396" y="235" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">Chat</text>
+            <rect x="44"  y="340" width="104" height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="96"  y="369" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">Daten</text>
+            <rect x="312" y="340" width="104" height="48" rx="8" fill="#111111" stroke="#252525"/>
+            <text x="364" y="369" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="500" fill="#6b7280">Reports</text>
+            <!-- Connection dots at module edges -->
+            <circle cx="148" cy="96"  r="3.5" fill="#22c55e" opacity="0.6"/>
+            <circle cx="312" cy="96"  r="3.5" fill="#22c55e" opacity="0.6"/>
+            <circle cx="104" cy="230" r="3.5" fill="#22c55e" opacity="0.6"/>
+            <circle cx="356" cy="230" r="3.5" fill="#22c55e" opacity="0.6"/>
+            <circle cx="148" cy="364" r="3.5" fill="#22c55e" opacity="0.6"/>
+            <circle cx="312" cy="364" r="3.5" fill="#22c55e" opacity="0.6"/>
+            <!-- KI center -->
+            <circle cx="230" cy="230" r="72" fill="#0a1a0f" stroke="#22c55e" stroke-width="1.5"/>
+            <circle cx="230" cy="230" r="58" fill="none" stroke="#22c55e" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+            <text x="230" y="222" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700" fill="#4ade80" letter-spacing="3">KI</text>
+            <text x="230" y="242" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="500" fill="#22c55e" letter-spacing="2">LAYER</text>
+            <!-- Mid-point accent dots -->
+            <circle cx="179" cy="153" r="2" fill="#22c55e" opacity="0.3"/>
+            <circle cx="281" cy="153" r="2" fill="#22c55e" opacity="0.3"/>
+            <circle cx="152" cy="230" r="2" fill="#22c55e" opacity="0.3"/>
+            <circle cx="308" cy="230" r="2" fill="#22c55e" opacity="0.3"/>
+            <circle cx="179" cy="307" r="2" fill="#22c55e" opacity="0.3"/>
+            <circle cx="281" cy="307" r="2" fill="#22c55e" opacity="0.3"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SECTION 1: ZWEI MODELLE ════════════════════════ -->
+    <section class="sw-modelle">
+      <div class="sw-section-inner">
+
+        <span class="sw-section-label">Wie es funktioniert</span>
+        <h2 class="sw-section-headline">Zwei Modelle. Eine Entscheidung.</h2>
+
+        <div class="sw-modelle-grid">
+
+          <!-- Addon -->
+          <div class="sw-modell-card sw-modell-card--addon">
+            <span class="sw-modell-badge sw-modell-badge--addon">ADDON</span>
+            <h3 class="sw-modell-title">KI nahtlos integriert</h3>
+            <p class="sw-modell-text">
+              KI nahtlos in eure bestehende Software integriert – kein Medienbruch für Endnutzer, flexibel als Chatfenster oder Hintergrundprozess.
+            </p>
+            <div class="sw-modell-features">
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Kein Medienbruch für Endnutzer</span>
+              </div>
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Flexibel als Chat oder Hintergrundprozess</span>
+              </div>
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Vollständig in euer UI-Design integrierbar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Whitelabel -->
+          <div class="sw-modell-card sw-modell-card--white">
+            <span class="sw-modell-badge sw-modell-badge--white">WHITELABEL</span>
+            <h3 class="sw-modell-title">KI unter eurer Marke</h3>
+            <p class="sw-modell-text">
+              KI unter eurer Marke – euer Logo, euer Name, eure CI. Der technische Support und Betrieb läuft komplett über uns.
+            </p>
+            <div class="sw-modell-features">
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Euer Logo und Firmenname</span>
+              </div>
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Vollständige CI-Anpassung</span>
+              </div>
+              <div class="sw-modell-feat">
+                <span class="sw-modell-feat-check">✓</span>
+                <span>Technischer Support über LEVER</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SECTION 2: HOSTING ════════════════════════════ -->
+    <section class="sw-hosting">
+      <div class="sw-section-inner">
+
+        <span class="sw-section-label sw-section-label--light">Hosting</span>
+        <h2 class="sw-section-headline sw-section-headline--light">Drei Hosting-Optionen.</h2>
+
+        <div class="sw-hosting-grid">
+
+          <!-- Microsoft Azure EU -->
+          <div class="sw-hosting-card">
+            <span class="sw-hosting-badge sw-hosting-badge--recommended">EMPFOHLEN</span>
+            <svg class="sw-hosting-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+            <h3 class="sw-hosting-title">Microsoft Azure EU</h3>
+            <p class="sw-hosting-text">DSGVO-konform, hohe Verfügbarkeit, europäische Rechenzentren.</p>
+            <div class="sw-hosting-details">
+              <div class="sw-hosting-detail">EU-Rechenzentren</div>
+              <div class="sw-hosting-detail">99,9% Verfügbarkeit</div>
+            </div>
+          </div>
+
+          <!-- Schwarz Digits -->
+          <div class="sw-hosting-card">
+            <span class="sw-hosting-badge sw-hosting-badge--secondary">MADE IN GERMANY</span>
+            <svg class="sw-hosting-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/>
+              <line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+            <h3 class="sw-hosting-title">Schwarz Digits</h3>
+            <p class="sw-hosting-text">Deutsche Cloud, deutsches Recht, maximale Rechtssicherheit.</p>
+            <div class="sw-hosting-details">
+              <div class="sw-hosting-detail">Deutsches Rechenzentrum</div>
+              <div class="sw-hosting-detail">Deutsches Recht</div>
+            </div>
+          </div>
+
+          <!-- On-Premise -->
+          <div class="sw-hosting-card">
+            <span class="sw-hosting-badge sw-hosting-badge--secondary">ENTERPRISE</span>
+            <svg class="sw-hosting-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+            <h3 class="sw-hosting-title">On-Premise</h3>
+            <p class="sw-hosting-text">Keine externen Server, maximale Datensouveränität.</p>
+            <div class="sw-hosting-details">
+              <div class="sw-hosting-detail">Eigene Infrastruktur</div>
+              <div class="sw-hosting-detail">Maximale Kontrolle</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SECTION 3: EU AI ACT ═══════════════════════════ -->
+    <section class="sw-compliance">
+      <div class="sw-section-inner">
+        <div class="sw-compliance-grid">
+
+          <!-- Linke Spalte -->
+          <div>
+            <span class="sw-compliance-label">EU AI Act</span>
+            <h2 class="sw-compliance-headline">
+              Wir übernehmen<br>die Compliance.
+            </h2>
+            <p class="sw-compliance-text">
+              Auf Wunsch übernehmen wir die Rolle des externen KI-Beauftragten – damit ihr euch auf euer Produkt konzentrieren könnt.
+            </p>
+          </div>
+
+          <!-- Rechte Spalte -->
+          <div class="sw-compliance-items">
+
+            <div class="sw-compliance-item">
+              <div class="sw-compliance-num">1</div>
+              <div>
+                <div class="sw-compliance-item-title">Risikoklassifizierung</div>
+                <div class="sw-compliance-item-text">Einordnung eurer KI-Systeme nach EU AI Act</div>
+              </div>
+            </div>
+
+            <div class="sw-compliance-item">
+              <div class="sw-compliance-num">2</div>
+              <div>
+                <div class="sw-compliance-item-title">KI-Inventar &amp; Dokumentation</div>
+                <div class="sw-compliance-item-text">Vollständige Dokumentation aller KI-Komponenten</div>
+              </div>
+            </div>
+
+            <div class="sw-compliance-item">
+              <div class="sw-compliance-num">3</div>
+              <div>
+                <div class="sw-compliance-item-title">Schulungsnachweise</div>
+                <div class="sw-compliance-item-text">Nachweise für Mitarbeiter-Schulungen</div>
+              </div>
+            </div>
+
+            <div class="sw-compliance-item">
+              <div class="sw-compliance-num">4</div>
+              <div>
+                <div class="sw-compliance-item-title">Interner &amp; externer Ansprechpartner</div>
+                <div class="sw-compliance-item-text">Wir sind die Anlaufstelle für euer Team und für alle externen Stakeholder</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SECTION 4: REFERENZ ════════════════════════════ -->
+    <section class="sw-referenz">
+      <div class="sw-section-inner">
+
+        <span class="sw-section-label sw-section-label--light">Referenz</span>
+        <h2 class="sw-section-headline sw-section-headline--light">Aus der Praxis.</h2>
+
+        <div class="sw-referenz-card">
+          <div class="sw-referenz-company">Valuestreamer</div>
+          <div class="sw-referenz-product">Shopfloor Management</div>
+          <p class="sw-referenz-text">
+            KI-Agent für Abweichungsmanagement – historische Lösungen werden automatisch gefunden und aufbereitet. Das Team spart sich stundenlange manuelle Suche in alten Berichten und Dokumenten.
+          </p>
+          <span class="sw-referenz-kpi">70% weniger Lösungszeit</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════ SECTION 5: PREISMODELL ════════════════════════ -->
+    <section class="sw-preise">
+      <div class="sw-section-inner">
+
+        <span class="sw-section-label">Preismodell</span>
+        <h2 class="sw-section-headline">Transparent &amp; skalierbar.</h2>
+        <p class="sw-preise-sub">Kein verstecktes Kleingedrucktes. Drei klare Bausteine.</p>
+
+        <div class="sw-preise-steps">
+
+          <div class="sw-preise-step">
+            <span class="sw-preise-num">01</span>
+            <div class="sw-preise-title">Implementierung</div>
+            <p class="sw-preise-text">Einmaliger Projektaufwand für Konzeption, Entwicklung und Integration.</p>
+            <span class="sw-preise-badge">EINMALIG</span>
+          </div>
+
+          <div class="sw-preise-step">
+            <span class="sw-preise-num">02</span>
+            <div class="sw-preise-title">Hosting &amp; Betrieb</div>
+            <p class="sw-preise-text">Monatliche Pauschale für Hosting, Wartung und laufenden Support.</p>
+            <span class="sw-preise-badge">MONATLICH</span>
+          </div>
+
+          <div class="sw-preise-step">
+            <span class="sw-preise-num">03</span>
+            <div class="sw-preise-title">Skalierung</div>
+            <p class="sw-preise-text">Flexibel angepasst an die Anzahl eurer Nutzer und Anfragen.</p>
+            <span class="sw-preise-badge">VARIABEL</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ ABSCHLUSS CTA ══════════════════════════════ -->
+    <section class="sw-final-cta">
+      <div>
+        <p class="sw-final-cta__pre">Bereit für eine Partnerschaft?</p>
+        <h2 class="sw-final-cta__headline">Partnerschaft anfragen.</h2>
+        <p class="sw-final-cta__sub">30 Minuten · Kostenlos · Unverbindlich</p>
+        <a href="kontakt.html" class="sw-final-cta__btn">Partnerschaft anfragen →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
